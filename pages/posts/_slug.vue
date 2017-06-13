@@ -11,12 +11,13 @@
 </template>
 
 <script>
-import content from '~/services/wpContentApi'
+import {getPostBySlug} from '~/services/wpContentApi'
 
 export default {
   transition: 'fade',
   async asyncData ({ params }) {
-    return { post: await content.getPostBySlug(params.slug) }
+    const post = await getPostBySlug(params.slug)
+    return {post}
   }
 }
 </script>

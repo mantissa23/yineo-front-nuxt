@@ -9,12 +9,13 @@
 <script>
 
 import Posts from '~components/Posts.vue'
-import content from '~/services/wpContentApi'
+import {getPosts} from '~/services/wpContentApi'
 
 export default {
   transition: 'fade',
   async asyncData () {
-    return { posts: await content.getPosts() }
+    const posts = await getPosts()
+    return { posts }
   },
   components: {
     Posts
