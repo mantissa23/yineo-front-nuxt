@@ -1,6 +1,6 @@
 <template>
 <section id="timeline">
-    <h1>Technologies</h1>
+    <h1>Compétences</h1>
 	<!--<p class="leader">All cards must be the same height and width for space calculations on large screens.</p>-->
 	<div class="demo-card-wrapper">
 		<div class="demo-card demo-card--step1">
@@ -49,10 +49,10 @@
 				<div class="number-box">
 					<span>04</span>
 				</div>
-				<h2><span class="small">Votre back-office préféré</span> CMS HEADLESS</h2>
+				<h2><span class="small">Votre back-office préféré</span> CMS Headless </h2>
 			</div>
 			<div class="body">
-				<p>Vous adorez écrire vos articles dans Wordpress ou l'administration personnalisable de Drupal ? Grâce à leurs APIs nous pouvons les connecter votre back-office préféré à un front Angular, Vue.JS, React. </p>
+				<p>Vous adorez écrire vos articles dans Wordpress ou l'administration personnalisable de Drupal ? Grâce à leurs nouvelles APIs il est possible de les connecter à un front-office Angular, Vue.JS, React. </p>
 				<img src="http://placehold.it/1000x500" alt="Graphic">
 			</div>
 		</div>
