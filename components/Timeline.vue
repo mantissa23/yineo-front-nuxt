@@ -44,28 +44,30 @@
 			</div>
 		</div>
 
+
+
 		<div class="demo-card demo-card--step4">
 			<div class="head">
 				<div class="number-box">
 					<span>04</span>
 				</div>
-				<h2><span class="small">Votre back-office préféré</span> CMS Headless </h2>
-			</div>
-			<div class="body">
-				<p>Vous adorez écrire vos articles dans Wordpress ou l'administration personnalisable de Drupal ? Grâce à leurs nouvelles APIs il est possible de les connecter à un front-office Angular, Vue.JS, React. </p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
-		<div class="demo-card demo-card--step5">
-			<div class="head">
-				<div class="number-box">
-					<span>05</span>
-				</div>
 				<h2><span class="small"></span>GraphQL </h2>
 			</div>
 			<div class="body">
 				<p>L'excellent GraphQL permet de révolutionner la manière de créer des API Json, c'est la pièce parfait pour faire communiquer de façon fluide et performante votre back-office et votre front-end</p>
+				<img src="http://placehold.it/1000x500" alt="Graphic">
+			</div>
+		</div>
+
+        		<div class="demo-card demo-card--step5">
+			<div class="head">
+				<div class="number-box">
+					<span>05</span>
+				</div>
+				<h2><span class="small">Back-office as Service</span> BACK-OFFICE </h2>
+			</div>
+			<div class="body">
+				<p>Vous adorez écrire vos articles dans Wordpress, l'administration personnalisable de Drupal ou ContentFulCMS ? GraphQL permet de connecter un back-end à la hauteur du front-end </p>
 				<img src="http://placehold.it/1000x500" alt="Graphic">
 			</div>
 		</div>
