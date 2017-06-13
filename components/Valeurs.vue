@@ -3,7 +3,7 @@
     <h2 style="text-align:center" class="title is-2">Valeurs</h2>
     <div class="columns">
       <div class="column">
-        <h2 class="title is-3">Compétence</h2>
+        <h2 class="title is-3">Sites API First</h2>
         <p>Confiez votre projet en toute confiance, il sera entre de bonnes main</p>
       </div>
       <div class="column">

@@ -62,10 +62,10 @@
 				<div class="number-box">
 					<span>05</span>
 				</div>
-				<h2><span class="small"></span>PHP </h2>
+				<h2><span class="small"></span>GraphQL </h2>
 			</div>
 			<div class="body">
-				<p>Développeur PHP depuis 2009, je suis parfaitement à l'aise avec ce language</p>
+				<p>L'excellent GraphQL permet de révolutionner la manière de créer des API Json, c'est la pièce parfait pour faire communiquer de façon fluide et performante votre back-office et votre front-end</p>
 				<img src="http://placehold.it/1000x500" alt="Graphic">
 			</div>
 		</div>
