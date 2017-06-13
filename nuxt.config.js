@@ -1,7 +1,36 @@
+/**
+ * Generate routes like ""/posts/xxxxx" so that nuxtjs can generate them
+ */
+const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
+const axios = require('axios')
+
+// @FIXME
+function generateRoutes() {
+  const promises = []
+  // posts
+  promises.push(axios.get(endpoint + '/posts?_embed&per_page=' + 100).then(result => {
+    let slugs = []
+    result.data.map(post => slugs.push('/posts/' + post.slug))
+    return slugs
+  }))
+
+  return Promise.all(promises).then(function(result) {
+    // we merge slugs arrays returned by each promise on a single big flat array
+    return [].concat.apply([], result);
+  })
+}
+
 module.exports = {
 
   router: {
     //middleware: ['wpContentCache']
+  },
+
+  /*
+  ** Generate dynamic routes
+  */
+  generate: {
+    routes: generateRoutes
   },
 
   /*

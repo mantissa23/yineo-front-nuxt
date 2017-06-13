@@ -1,5 +1,6 @@
 <template>
 <section id="timeline">
+    <h1>Technologies</h1>
 	<!--<p class="leader">All cards must be the same height and width for space calculations on large screens.</p>-->
 	<div class="demo-card-wrapper">
 		<div class="demo-card demo-card--step1">
@@ -7,10 +8,10 @@
 				<div class="number-box">
 					<span>01</span>
 				</div>
-				<h2><span class="small">JavaScript</span> Node.js</h2>
+				<h2><span class="small">Des serveurs performants</span> Node.js</h2>
 			</div>
 			<div class="body">
-				<p>Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. </p>
+                <p>Bâti sur le moteur JavaScript V8 de Chrome, <strong>Node.js</strong> et son immense écosystème de modules permettent de développer rapidement des serveurs très performants</p>
 				<img height="400px" src="~assets/images/nodejs-logo.png" alt="Graphic">
 			</div>
 		</div>
@@ -20,10 +21,10 @@
 				<div class="number-box">
 					<span>02</span>
 				</div>
-				<h2><span class="small">JavaScript</span> Vue.js</h2>
+				<h2><span class="small">Une UI fluide & interactive</span> Vue.js</h2>
 			</div>
 			<div class="body">
-				<p>A progressive, incrementally-adoptable JavaScript framework for building UI on the web. http://vuejs.org.</p>
+				<p><strong>Vue.js</strong> fait partie de la nouvelle génération de librairies JS orientée composant telle que React. Légère et surpuissante, elle permet un gain de temps précieux pour le développement du front-end.</p>
 				<img src="~assets/images/vuejs-logo.png" alt="Graphic">
 			</div>
 		</div>
@@ -33,10 +34,12 @@
 				<div class="number-box">
 					<span>03</span>
 				</div>
-				<h2><span class="small"></span> HTML & CSS</h2>
+				<h2><span class="small">Du JavaScript SEO-friendly</span> Nuxt.js</h2>
 			</div>
 			<div class="body">
-				<p> Foundation, Bulma, Bootstrap</p>
+				<p> Les applications JavaScript mal référencées ? Du passé grâce à l'excellent Nuxt.js ! 
+                    Ce framework bâti sur Vue.js propose un puissant système automatisé de Server-side-rendering pour un référencement naturel optimal
+                </p>
 				<img src="http://placehold.it/1000x500" alt="Graphic">
 			</div>
 		</div>
@@ -46,10 +49,10 @@
 				<div class="number-box">
 					<span>04</span>
 				</div>
-				<h2><span class="small"></span> PHP</h2>
+				<h2><span class="small">Votre back-office préféré</span> CMS HEADLESS</h2>
 			</div>
 			<div class="body">
-				<p>Développeur PHP depuis 2009, je suis parfaitement à l'aise avec ce language</p>
+				<p>Vous adorez écrire vos articles dans Wordpress ou l'administration personnalisable de Drupal ? Grâce à leurs APIs nous pouvons les connecter votre back-office préféré à un front Angular, Vue.JS, React. </p>
 				<img src="http://placehold.it/1000x500" alt="Graphic">
 			</div>
 		</div>
@@ -59,10 +62,10 @@
 				<div class="number-box">
 					<span>05</span>
 				</div>
-				<h2><span class="small"></span> CMS headless</h2>
+				<h2><span class="small"></span>PHP </h2>
 			</div>
 			<div class="body">
-				<p>J'aime brancher mes applications JavaScript à des solutions de gestions de contenus : Drupal & Wordpress</p>
+				<p>Développeur PHP depuis 2009, je suis parfaitement à l'aise avec ce language</p>
 				<img src="http://placehold.it/1000x500" alt="Graphic">
 			</div>
 		</div>
