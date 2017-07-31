@@ -4,17 +4,17 @@
 const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
 const axios = require('axios')
 
-const getPosts = async (perPage = 10) => {
-  const { data } = await axios.get(endpoint + '/posts?_embed&per_page=' + perPage)
-  return data
+export const getPosts = async (perPage = 10, pageNumber = 1) => {
+  const response = await axios.get(endpoint + '/posts?per_page=' + perPage + '&page=' + pageNumber)
+  const result = {
+    total: Number(response.headers['x-wp-total']),
+    totalPages: Number(response.headers['x-wp-totalpages']),
+    data: response.data
+  }
+  return result
 }
 
-const getPostBySlug = async (slug) => {
+export const getPostBySlug = async (slug) => {
   const {data} = await axios.get(endpoint + '/posts?_embed&slug=' + slug)
   return data[0]
-}
-
-export {
-  getPosts,
-  getPostBySlug
 }

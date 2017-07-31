@@ -16,7 +16,6 @@ import Valeurs from '~components/Valeurs.vue'
 
 export default {
   transition: 'fade',
-  //  layout: 'home',
   components: {
     Logo,
     Navigation,

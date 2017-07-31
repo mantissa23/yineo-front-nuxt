@@ -13,8 +13,8 @@ import {getPosts} from '~/services/wpContentApi'
 
 export default {
   transition: 'fade',
-  async asyncData () {
-    const posts = await getPosts()
+  async asyncData ({query}) {
+    const posts = await getPosts(10, query ? query.page : 1)
     return { posts }
   },
   components: {
