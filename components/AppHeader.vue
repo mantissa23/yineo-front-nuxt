@@ -7,7 +7,7 @@
           Développeur freelance Full Stack JavaScript
         </h2>
         -->
-      <h2 class="title is-3">Développeur freelance Full Stack JavaScript à Nantes</h2>
+      <h2 class="title is-2">Développeur freelance Full Stack JavaScript à Nantes</h2>
       <navigation />
   
     </div>

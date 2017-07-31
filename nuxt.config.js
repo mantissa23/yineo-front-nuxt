@@ -8,7 +8,7 @@ const axios = require('axios')
 function generateRoutes() {
   const promises = []
   // posts
-  promises.push(axios.get(endpoint + '/posts?_embed&per_page=' + 100).then(result => {
+  promises.push(axios.get(endpoint + '/posts?per_page=' + 200).then(result => {
     let slugs = []
     result.data.map(post => slugs.push('/posts/' + post.slug))
     return slugs

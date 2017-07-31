@@ -6,8 +6,10 @@
         <appheader/>
       </div>
       <nuxt/>
-      <footer>
+  
+      <footer class="footer">
       </footer>
+  
     </div>
   </transition>
 </template>
