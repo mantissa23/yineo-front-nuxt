@@ -32,6 +32,7 @@
 export default {
   methods: {
     setMenuMobileIsOpened () {
+      console.log(this.$store.state)
       this.$store.commit('setMenuMobileIsOpened', !this.$store.state.menuMobileIsOpened)
     }
   }

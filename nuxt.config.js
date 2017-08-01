@@ -21,7 +21,7 @@ function generateRoutes() {
 }
 
 module.exports = {
-
+  plugins: ['~plugins/app'],
   env: {
     siteBaseUrl: '"http://yineo.fr',
     wordpressApiBaseUrl: wordpressApiBaseUrl
