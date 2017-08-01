@@ -7,7 +7,7 @@
   
       Le front-end est propulsé par
       <a href="https://nuxtjs.org/"> Nuxt.js</a>, un framework pour
-      <a href="https://vuejs.org/"> Vue.js</a> et le framework CSS<a href="http://bulma.io/">Bulma</a>
+      <a href="https://vuejs.org/"> Vue.js</a> et le framework CSS <a href="http://bulma.io/">Bulma</a>
   
     </div>
   </footer>
