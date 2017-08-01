@@ -1,14 +1,14 @@
 /**
  * Generate routes like ""/posts/xxxxx" so that nuxtjs can generate them
  */
-const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
+const wordpressApiBaseUrl = 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
 const axios = require('axios')
 
 // @FIXME seulement 100 articles maxixum
 function generateRoutes() {
   const promises = []
   // posts. 100 is the max we can process with wp api
-  promises.push(axios.get(endpoint + '/posts?per_page=' + 100).then(result => {
+  promises.push(axios.get(wordpressApiBaseUrl + '/posts?per_page=' + 100).then(result => {
     let slugs = []
     result.data.map(post => slugs.push('/posts/' + post.slug))
     return slugs
@@ -23,7 +23,8 @@ function generateRoutes() {
 module.exports = {
 
   env: {
-    WordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
+    siteBaseUrl: '"http://yineo.fr',
+    wordpressApiBaseUrl: wordpressApiBaseUrl
   },
 
   router: {
@@ -50,7 +51,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: '/css/bulma.css' },
+      { rel: 'stylesheet', type: 'text/css', href: '/css/bulma-0.5.0.css' },
       { rel: 'stylesheet', type: 'text/css', href: '/css/app.css' },
     ],
     script: [

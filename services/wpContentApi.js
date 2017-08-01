@@ -1,7 +1,7 @@
 /**
  * Get content from wordpress via REST Api
  */
-const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
+const endpoint = process.env.wordpressApiBaseUrl
 const axios = require('axios')
 
 export const getPosts = async (perPage = 10, pageNumber = 1) => {

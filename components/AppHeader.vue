@@ -1,18 +1,15 @@
 <template>
-  <section class="header">
-    <div>
-      <h1 class="title"> YINEO </h1>
-      <h2 class="title is-2">Développeur freelance Full Stack JavaScript à Nantes</h2>
-      <navigation />
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Yann - Développeur freelance Full Stack JavaScript à Nantes
+        </h1>
+        <h2 class="subtitle">
+          Vue.js, Nuxt.js, AngularJS, Node.js, JavaScript, PHP
+        </h2>
+      </div>
     </div>
   </section>
 </template>
 
-<script>
-import navigation from '~/components/Navigation.vue'
-export default {
-  components: {
-    navigation
-  }
-}
-</script>

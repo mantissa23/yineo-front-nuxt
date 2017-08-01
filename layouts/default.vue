@@ -1,27 +1,18 @@
 <template>
-  <transition name="fade">
-    <div>
-      <div class="container header">
-        <logo/>
-        <appheader/>
-      </div>
-      <nuxt/>
-  
-      <footer class="footer">
-      </footer>
-  
-    </div>
-  </transition>
+  <div>
+    <AppNavigation />
+    <AppHeader/>
+    <nuxt/>
+    <AppFooter />
+  </div>
 </template>
 
 <script>
-import appheader from '~/components/AppHeader.vue'
-import logo from '~/components/Logo.vue'
+import AppHeader from '~/components/AppHeader.vue'
+import AppNavigation from '~/components/AppNavigation.vue'
+import AppFooter from '~/components/AppFooter.vue'
 
 export default {
-  components: {
-    appheader,
-    logo
-  }
+  components: { AppHeader, AppNavigation, AppFooter }
 }
 </script>
