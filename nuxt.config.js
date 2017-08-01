@@ -4,7 +4,7 @@
 const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
 const axios = require('axios')
 
-// @FIXME
+// @FIXME seulement 100 articles maxixum
 function generateRoutes() {
   const promises = []
   // posts. 100 is the max we can process with wp api
@@ -21,6 +21,10 @@ function generateRoutes() {
 }
 
 module.exports = {
+
+  env: {
+    WordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yineo.fr'
+  },
 
   router: {
     //middleware: ['wpContentCache']

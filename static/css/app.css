@@ -97,7 +97,7 @@
 }
 
 .posts .more-link {
-  display: none
+  display : none;
 }
 
 .nuxt-link-exact-active {
