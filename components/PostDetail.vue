@@ -1,11 +1,11 @@
 <template>
-  <section class="container content post">
+  <section class="container content post section">
     <h1 class="title is-3" v-html="post.title.rendered"></h1>
     <!--
     <div class="date">écrit le {{post.date}}</div>
     <div class="date">édité le {{post.modified}}</div>
     -->
-    <div class="featured-media"><img src="https://yannboisselier.files.wordpress.com/2017/07/capture-d_ecc81cran-2017-07-25-acc80-10-51-18.png"/></div>
+    <div class="featured-media"><img :src="post.featured_media_url"/></div>
     <div v-html="post.content.rendered" class="content"></div>
     <div v-if="post._embedded['wp:term'][1]" class="">
       <ul>
