@@ -5,12 +5,13 @@ const wordpressApiBaseUrl = 'https://public-api.wordpress.com/wp/v2/sites/yannbo
 const axios = require('axios')
 
 // @FIXME seulement 100 articles maxixum
+// @FIXME ajouter les tags à la génération
 function generateRoutes() {
   const promises = []
   // posts. 100 is the max we can process with wp api
   promises.push(axios.get(wordpressApiBaseUrl + '/posts?per_page=' + 100).then(result => {
     let slugs = []
-    result.data.map(post => slugs.push('/posts/' + post.slug))
+    result.data.map(post => slugs.push('/blog/' + post.slug))
     return slugs
   }))
 
