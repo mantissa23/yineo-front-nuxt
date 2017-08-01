@@ -1,12 +1,15 @@
 export default function (context) {
   oldUris.find((element) => {
-    if (element.indexOf(context.route.path) === 0) {
+    if (context.route.path === element) {
       const slug = element.substring(12)
       context.redirect(301, '/blog/' + slug)
     }
   })
 }
 
+/**
+ * Uris when the blog was displayed by wordpress
+ */
 const oldUris = [
   '/2016/04/19/jsonp-avec-apache-solr-et-angular-js/',
   '/2016/05/03/apprendre-git-en-samusant/',
