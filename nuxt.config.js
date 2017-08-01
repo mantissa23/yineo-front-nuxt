@@ -28,7 +28,7 @@ module.exports = {
   },
 
   router: {
-    //middleware: ['wpContentCache']
+    middleware: ['redirect-old-uris']
   },
 
   /*
