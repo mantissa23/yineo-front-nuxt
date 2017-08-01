@@ -47,7 +47,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: "robots", content: "noindex" },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'YINEO - développeur freelance full stack à Nantes' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
