@@ -1,32 +1,12 @@
 /**
  * Generate routes like ""/posts/xxxxx" so that nuxtjs can generate them
  */
-const wordpressApiBaseUrl = 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
-const axios = require('axios')
-
-// @FIXME seulement 100 articles maxixum
-// @FIXME ajouter les tags à la génération
-function generateRoutes() {
-  const promises = []
-  // posts. 100 is the max we can process with wp api
-  promises.push(axios.get(wordpressApiBaseUrl + '/posts?per_page=' + 100).then(result => {
-    let slugs = []
-    result.data.map(post => slugs.push('/blog/' + post.slug))
-    return slugs
-  }))
-
-  return Promise.all(promises).then(function(result) {
-    // we merge slugs arrays returned by each promise on a single big flat array
-    return [].concat.apply([], result);
-  })
-}
-
 module.exports = {
   cache: true,
   plugins: ['~plugins/app'],
   env: {
-    siteBaseUrl: '"http://yineo.fr',
-    wordpressApiBaseUrl: wordpressApiBaseUrl
+    siteBaseUrl: 'http://yineo.fr',
+    wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
   },
 
   router: {
@@ -34,17 +14,10 @@ module.exports = {
   },
 
   /*
-  ** Generate dynamic routes
-  */
-  generate: {
-    routes: generateRoutes
-  },
-
-  /*
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: 'Yineo - développement Vue.js, React, Node et JavaSctipt',
     meta: [
       { charset: 'utf-8' },
       { name: "robots", content: "noindex" },
@@ -68,7 +41,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios'],
+    vendor: ['axios', './services/wpContentApi'],
     loaders: [
       {
         test: /\.(png|jpe?g|gif|svg)$/,

@@ -3,7 +3,7 @@
   
     <div slot="content">
   
-      <section class="section">
+      <section class="section content">
   
         <div class="sub-section">
           <div class="columns">
@@ -36,7 +36,7 @@
         </div>
   
         <div class="sub-section">
-          <h2 class="title is-2">Projets personnels</h2>
+          <h2 class="title is-2">Travaux personnels</h2>
           <ul>
             <li>Une calculette gratuite de charges sociales pour freelance :
               <a href="http://eurl-app.fr"> http://eurl-app.fr</a>
