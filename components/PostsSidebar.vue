@@ -1,4 +1,4 @@
-<!-- Liste des posts de blogs -->
+<!--  Last posts titles in sidebar -->
 <template>
   <ul class="posts">
     <div v-for="post in posts" class="post">

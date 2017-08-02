@@ -1,3 +1,4 @@
+<!-- Layout component for content zone -->
 <template>
   <div class="container">
     <div class="columns">

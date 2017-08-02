@@ -1,3 +1,4 @@
+<!-- main layout -->
 <template>
   <div>
     <AppNavigation />

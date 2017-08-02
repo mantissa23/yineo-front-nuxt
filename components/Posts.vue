@@ -1,4 +1,4 @@
-<!-- Liste des posts de blogs -->
+<!-- Post list as teasers -->
 <template>
   <section class="posts section">
     <div v-for="post in posts.data" class="post">

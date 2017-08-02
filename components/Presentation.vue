@@ -1,3 +1,4 @@
+<!-- Short presentation about me -->
 <template>
   <div>
     <section class="section">

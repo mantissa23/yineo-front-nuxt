@@ -1,84 +1,86 @@
 <template>
-<section id="timeline">
+  <section id="timeline">
     <h1>Compétences</h1>
-	<!--<p class="leader">All cards must be the same height and width for space calculations on large screens.</p>-->
-	<div class="demo-card-wrapper">
-		<div class="demo-card demo-card--step1">
-			<div class="head">
-				<div class="number-box">
-					<span>01</span>
-				</div>
-				<h2><span class="small">Des serveurs performants</span> Node.js</h2>
-			</div>
-			<div class="body">
-                <p>Bâti sur le moteur JavaScript V8 de Chrome, <strong>Node.js</strong> et son immense écosystème de modules permettent de développer rapidement des serveurs très performants</p>
-				<img height="400px" src="~assets/images/nodejs-logo.png" alt="Graphic">
-			</div>
-		</div>
-
-		<div class="demo-card demo-card--step2">
-			<div class="head">
-				<div class="number-box">
-					<span>02</span>
-				</div>
-				<h2><span class="small">Une UI fluide & interactive</span> Vue.js</h2>
-			</div>
-			<div class="body">
-				<p><strong>Vue.js</strong> fait partie de la nouvelle génération de librairies JS orientée composant telle que React. Légère et surpuissante, elle permet un gain de temps précieux pour le développement du front-end.</p>
-				<img src="~assets/images/logo-vuejs.png" alt="Graphic">
-			</div>
-		</div>
-
-		<div class="demo-card demo-card--step3">
-			<div class="head">
-				<div class="number-box">
-					<span>03</span>
-				</div>
-				<h2><span class="small">Du JavaScript SEO-friendly</span> Nuxt.js</h2>
-			</div>
-			<div class="body">
-				<p> Les applications JavaScript mal référencées ? Du passé grâce à l'excellent Nuxt.js ! 
-                    Ce framework bâti sur Vue.js propose un puissant système automatisé de Server-side-rendering pour un référencement naturel optimal
-                </p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
-
-
-		<div class="demo-card demo-card--step4">
-			<div class="head">
-				<div class="number-box">
-					<span>04</span>
-				</div>
-				<h2><span class="small"></span>GraphQL </h2>
-			</div>
-			<div class="body">
-				<p>L'excellent GraphQL permet de révolutionner la manière de créer des API Json, c'est la pièce parfait pour faire communiquer de façon fluide et performante votre back-office et votre front-end</p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
-        		<div class="demo-card demo-card--step5">
-			<div class="head">
-				<div class="number-box">
-					<span>05</span>
-				</div>
-				<h2><span class="small">Back-office as Service</span> BACK-OFFICE </h2>
-			</div>
-			<div class="body">
-				<p>Vous adorez écrire vos articles dans Wordpress, l'administration personnalisable de Drupal ou ContentFulCMS ? GraphQL permet de connecter un back-end à la hauteur du front-end </p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-    
-	</div>
-</section>
-
+    <!--<p class="leader">All cards must be the same height and width for space calculations on large screens.</p>-->
+    <div class="demo-card-wrapper">
+      <div class="demo-card demo-card--step1">
+        <div class="head">
+          <div class="number-box">
+            <span>01</span>
+          </div>
+          <h2>
+            <span class="small">Des serveurs performants</span> Node.js</h2>
+        </div>
+        <div class="body">
+          <p>Bâti sur le moteur JavaScript V8 de Chrome,
+            <strong>Node.js</strong> et son immense écosystème de modules permettent de développer rapidement des serveurs très performants</p>
+          <img height="400px" src="~assets/images/nodejs-logo.png" alt="Graphic">
+        </div>
+      </div>
+  
+      <div class="demo-card demo-card--step2">
+        <div class="head">
+          <div class="number-box">
+            <span>02</span>
+          </div>
+          <h2>
+            <span class="small">Une UI fluide & interactive</span> Vue.js</h2>
+        </div>
+        <div class="body">
+          <p>
+            <strong>Vue.js</strong> fait partie de la nouvelle génération de librairies JS orientée composant telle que React. Légère et surpuissante, elle permet un gain de temps précieux pour le développement du front-end.</p>
+          <img src="~assets/images/logo-vuejs.png" alt="Graphic">
+        </div>
+      </div>
+  
+      <div class="demo-card demo-card--step3">
+        <div class="head">
+          <div class="number-box">
+            <span>03</span>
+          </div>
+          <h2>
+            <span class="small">Du JavaScript SEO-friendly</span> Nuxt.js</h2>
+        </div>
+        <div class="body">
+          <p> Les applications JavaScript mal référencées ? Du passé grâce à l'excellent Nuxt.js ! Ce framework bâti sur Vue.js propose un puissant système automatisé de Server-side-rendering pour un référencement naturel optimal
+          </p>
+          <img src="http://placehold.it/1000x500" alt="Graphic">
+        </div>
+      </div>
+  
+      <div class="demo-card demo-card--step4">
+        <div class="head">
+          <div class="number-box">
+            <span>04</span>
+          </div>
+          <h2>
+            <span class="small"></span>GraphQL </h2>
+        </div>
+        <div class="body">
+          <p>L'excellent GraphQL permet de révolutionner la manière de créer des API Json, c'est la pièce parfait pour faire communiquer de façon fluide et performante votre back-office et votre front-end</p>
+          <img src="http://placehold.it/1000x500" alt="Graphic">
+        </div>
+      </div>
+  
+      <div class="demo-card demo-card--step5">
+        <div class="head">
+          <div class="number-box">
+            <span>05</span>
+          </div>
+          <h2>
+            <span class="small">Back-office as Service</span> BACK-OFFICE </h2>
+        </div>
+        <div class="body">
+          <p>Vous adorez écrire vos articles dans Wordpress, l'administration personnalisable de Drupal ou ContentFulCMS ? GraphQL permet de connecter un back-end à la hauteur du front-end </p>
+          <img src="http://placehold.it/1000x500" alt="Graphic">
+        </div>
+      </div>
+  
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-
 /* Media Queries */
 
 @mixin mq-xs {
@@ -111,6 +113,7 @@ $border: 1px solid rgba(191, 191, 191, 0.4);
 $items: 5;
 $rows: ceil($items/2);
 
+
 /* Card sizing */
 
 $card-height: 400px;
@@ -121,6 +124,7 @@ $stagger: 180px;
 $outer-margin: 90px;
 $marker-size: 9px;
 
+
 /* Colors */
 
 $steps: #46b8e9;
@@ -130,13 +134,15 @@ $colors: #46b8e9,
 #4d92eb;
 $timeline: #bdbdbd;
 
+
 /* Calculations */
 
-$container-height: $rows * ($card-height + $outer-margin) + $stagger;
-$container-width: $card-width*2 + $outer-margin*3;
-$head-height: $number-size + 50;
+$container-height: $rows * ($card-height + $outer-margin)+$stagger;
+$container-width: $card-width*2+$outer-margin*3;
+$head-height: $number-size+50;
 $body-height: $card-height - $head-height;
-$marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
+$marker-dist: $card-width+$outer-margin/2 - $marker-size/2;
+
 
 /* Placeholders */
 
@@ -161,20 +167,27 @@ $marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
 }
 
 
+
 /* Some Cool Stuff */
 
-$counter: $items - $rows + 2;
+$counter: $items - $rows+2;
 @for $i from 1 through $rows {
-  .demo-card:nth-child(#{$i*2-1})   { order: $i }
-  .demo-card:nth-child(#{$i*2})     { order: $counter }
-  $counter: $counter + 1;
+  .demo-card:nth-child(#{$i*2-1}) {
+    order: $i
+  }
+  .demo-card:nth-child(#{$i*2}) {
+    order: $counter
+  }
+  $counter: $counter+1;
 }
+
 
 /* Border Box */
 
 * {
   box-sizing: border-box;
 }
+
 
 /* Fonts */
 
@@ -184,8 +197,7 @@ body {
 
 #timeline {
   // padding: 100px 0;
-  background: $background;
-  // border-top: $border;
+  background: $background; // border-top: $border;
   // /border-bottom: $border;
   h1 {
     text-align: center;
@@ -324,9 +336,7 @@ body {
       }
       img {
         display: block;
-        margin : auto
-
-        //  width: 100%;
+        margin: auto //  width: 100%;
       }
     }
     @for $i from 1 through $items {
