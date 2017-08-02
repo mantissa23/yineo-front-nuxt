@@ -4,7 +4,7 @@
 
 <script>
 import { getPostBySlug } from '~/services/wpContentApi'
-import PostDetail from '~components/PostDetail'
+import PostDetail from '~/components/PostDetail'
 
 export default {
   transition: 'fade',

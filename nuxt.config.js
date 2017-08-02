@@ -22,6 +22,7 @@ function generateRoutes() {
 }
 
 module.exports = {
+  cache: true,
   plugins: ['~plugins/app'],
   env: {
     siteBaseUrl: '"http://yineo.fr',

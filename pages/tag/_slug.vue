@@ -3,7 +3,7 @@
 </template> 
 
 <script>
-import Posts from '~components/Posts.vue'
+import Posts from '~/components/Posts.vue'
 import { getPostsByTagId, getTagBySlug } from '~/services/wpContentApi'
 
 export default {
