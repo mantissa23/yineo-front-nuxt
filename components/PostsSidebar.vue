@@ -1,12 +1,12 @@
 <!-- Liste des posts de blogs -->
 <template>
-  <div class="posts">
+  <ul class="posts">
     <div v-for="post in posts" class="post">
       <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }">
-        <h4 class="title is-6" v-html="post.title.rendered"></h4>
+        <li class="" v-html="post.title.rendered"></li>
       </nuxt-link>
     </div>
-  </div>
+  </ul>
 </template>
 
 <script>
