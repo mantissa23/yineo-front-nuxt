@@ -8,7 +8,7 @@
     <div v-html="post.content.rendered" class="content"></div>
     <div v-if="post._embedded['wp:term'][1]" class="tags">
       <ul>
-        <li class="tag" v-for="tag in post._embedded['wp:term'][1]">
+        <li class="tag is-medium" v-for="tag in post._embedded['wp:term'][1]">
           <nuxt-link :to="{ name: 'tag-slug', params: { slug: tag.slug } }"> {{tag.name}} </nuxt-link>
         </li>
       </ul>
