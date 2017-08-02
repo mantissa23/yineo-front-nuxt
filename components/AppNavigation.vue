@@ -3,7 +3,7 @@
     <nav class="navbar">
       <div class="navbar-brand">
         <span class="navbar-item">
-         <img alt="Logo de Yineo" src="~assets/images/logo-yineo.png" />YINEO
+         <img alt="Logo Yineo" src="~assets/images/logo-yineo.png" /> <span id="company-name">Y I N E O</span>
         </span>
   
         <div @click="setMenuMobileIsOpened" :class="{'is-active': this.$store.state.menuMobileIsOpened}" class="navbar-burger" data-target="app-menu">
@@ -40,6 +40,13 @@ export default {
 </script>
 
 <style scoped>
+
+#company-name {
+  position:relative;
+  top:-2px;
+  left:+4px;
+  font-weight: bold;
+}
 
 /* Create slide animation on mobile */
 @media screen and (max-width: 999px) {

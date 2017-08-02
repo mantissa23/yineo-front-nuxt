@@ -3,10 +3,11 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Yann - Développeur freelance Full Stack JavaScript à Nantes
+          Yann Boisselier <br />
+          Développeur freelance full-stack à Nantes
         </h1>
         <h2 class="subtitle">
-          Vue.js, Nuxt.js, AngularJS, Node.js, JavaScript, PHP
+          JavaScript, Vue.js, Nuxt.js, AngularJS, React, Node, PHP
         </h2>
       </div>
     </div>
