@@ -25,7 +25,7 @@
 			</div>
 			<div class="body">
 				<p><strong>Vue.js</strong> fait partie de la nouvelle génération de librairies JS orientée composant telle que React. Légère et surpuissante, elle permet un gain de temps précieux pour le développement du front-end.</p>
-				<img src="~assets/images/vuejs-logo.png" alt="Graphic">
+				<img src="~assets/images/logo-vuejs.png" alt="Graphic">
 			</div>
 		</div>
 

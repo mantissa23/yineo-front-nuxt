@@ -12,7 +12,7 @@ cachios.getResponseCopy = function (response) {
   }
 }
 
-export const getPosts = async (perPage = 10, pageNumber = 1) => {
+export const getPaginatedPosts = async (perPage = 10, pageNumber = 1) => {
   const response = await cachios.get(endpoint + '/posts?per_page=' + perPage + '&page=' + pageNumber, {
     ttl: 3600
   })
@@ -22,6 +22,13 @@ export const getPosts = async (perPage = 10, pageNumber = 1) => {
     data: response.data
   }
   return result
+}
+
+export const getPosts = async (perPage = 10) => {
+  const response = await cachios.get(endpoint + '/posts?per_page=' + perPage, {
+    ttl: 3600
+  })
+  return response.data
 }
 
 export const getPostBySlug = async (slug) => {
@@ -38,7 +45,7 @@ export const getTagBySlug = async (slug) => {
   return data[0]
 }
 
-export const getPostsByTagId = async (perPage = 10, pageNumber = 1, tagId) => {
+export const getPaginatedPostsByTagId = async (perPage = 10, pageNumber = 1, tagId) => {
   const response = await cachios.get(endpoint + '/posts?per_page=' + perPage + '&page=' + pageNumber + '&tags=' + tagId, {
     ttl: 3600
   })

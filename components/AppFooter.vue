@@ -1,14 +1,43 @@
 <template>
   <footer class="footer">
     <div class="container">
+      <div class="columns has-text-centered">
+        <div class="column">
+          <div class="logo-title">Wordpress.com</div>
+          <img class="logo-image" src="~assets/images/logo-wordpress.png" />
+          <!--<a href="https://wordpress.com/"> Wordpress.com</a>-->
+          <br />
+        </div>
   
-      Le contenu de ce site est propulsé par l'API REST de
-      <a href="https://wordpress.com/"> Wordpress.com</a> <br />
+        <div class="column">
+          <div class="logo-title">Vue.js</div>
+          <img class="logo-image" src="~assets/images/logo-vuejs.png" />
+        </div>
+
+        <div class="column">
+          <div class="logo-title">Bulma</div>
+          <img class="logo-image" src="~assets/images/logo-bulma.png" />
+        </div>
   
-      Le front-end est propulsé par
-      <a href="https://nuxtjs.org/"> Nuxt.js</a>, un framework pour
-      <a href="https://vuejs.org/"> Vue.js</a> et le framework CSS <a href="http://bulma.io/">Bulma</a>
+        <div class="column">
+          <div class="logo-title">Nuxt.js</div>
+          <img class="logo-image" src="~assets/images/logo-nuxt.png" />
+        </div>
+  
+  
+      </div>
   
     </div>
   </footer>
 </template>
+
+<style scoped>
+.logo-title {
+  font-weight: bold;
+  margin: auto;
+}
+
+.logo-image {
+  max-height: 100px
+}
+</style>

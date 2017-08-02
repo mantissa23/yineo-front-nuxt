@@ -1,17 +1,25 @@
 <template>
-  <Homepage :posts="posts" />
+  <ContentLayout>
+    <Presentation slot="content"/>
+    <div slot="sidebar">
+      <h2 class="title is-2">Derniers billets</h2>
+      <PostsSidebar :posts="posts" />
+    </div>
+  </ContentLayout>
 </template>
 
 <script>
-import Homepage from '~/components/Homepage'
+import ContentLayout from '~/components/ContentLayout'
+import Presentation from '~/components/Presentation'
+import PostsSidebar from '~/components/PostsSidebar'
 import { getPosts } from '~/services/wpContentApi'
 
 export default {
   transition: 'fade',
-  components: { Homepage },
+  components: { ContentLayout, Presentation, PostsSidebar },
   async asyncData ({ query }) {
     const posts = await getPosts(10)
-    return { posts: posts.data }
+    return { posts }
   }
 }
 </script>
