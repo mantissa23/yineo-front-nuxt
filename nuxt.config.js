@@ -4,7 +4,7 @@
 module.exports = {
 
   plugins: [
-    '~/plugins/app', '~/plugins/google-analytics',
+    '~/plugins/app', 
     { src: '~/plugins/google-analytics', ssr: false }
   ],
   env: {
