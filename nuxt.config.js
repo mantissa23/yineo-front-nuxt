@@ -3,7 +3,8 @@
  */
 module.exports = {
   cache: true,
-  plugins: ['~plugins/app'],
+  plugins: [
+    '~/plugins/app', '~/plugins/google-analytics'],
   env: {
     siteBaseUrl: 'http://yineo.fr',
     wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
