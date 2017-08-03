@@ -3,9 +3,10 @@
  */
 module.exports = {
 
-  cache: true,
   plugins: [
-    '~/plugins/app', '~/plugins/google-analytics'],
+    '~/plugins/app', '~/plugins/google-analytics',
+    { src: '~/plugins/google-analytics', ssr: false }
+  ],
   env: {
     siteBaseUrl: 'http://yineo.fr',
     wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
@@ -42,24 +43,6 @@ module.exports = {
   */
   build: {
     vendor: ['axios', './services/wpContentApi'],
-    loaders: [
-      {
-        test: /\.(png|jpe?g|gif|svg)$/,
-        loader: 'url-loader',
-        query: {
-          limit: 1000, // 1KO
-          name: 'img/[name].[hash:7].[ext]'
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        query: {
-          limit: 1000, // 1 KO
-          name: 'fonts/[name].[hash:7].[ext]'
-        }
-      }
-    ],
     /*
     ** Run ESLINT on save
     */
