@@ -2,6 +2,7 @@
  * Generate routes like ""/posts/xxxxx" so that nuxtjs can generate them
  */
 module.exports = {
+
   cache: true,
   plugins: [
     '~/plugins/app', '~/plugins/google-analytics'],
@@ -9,7 +10,6 @@ module.exports = {
     siteBaseUrl: 'http://yineo.fr',
     wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
   },
-
   router: {
     middleware: ['redirect-old-uris']
   },
@@ -63,8 +63,8 @@ module.exports = {
     /*
     ** Run ESLINT on save
     */
-    extend(config, ctx) {
-      if (ctx.isClient) {
+    extend (config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
