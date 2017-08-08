@@ -4,7 +4,8 @@ export default (context) => {
   /*
   ** Only run on client-side and only in production mode
   */
-  if (process.env.NODE_ENV === 'production') {
+  if (true) {
+  //  if (process.env.NODE_ENV === 'production') {
     /*
     ** Include Google Analytics Script
     */
@@ -22,6 +23,7 @@ export default (context) => {
     ** Every time the route changes (fired on initialization too)
     */
     context.app.router.afterEach((to, from) => {
+      console.log('route changed')
       /*
       ** We tell Google Analytic to add a page view
       */
