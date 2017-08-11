@@ -1,5 +1,5 @@
 <template>
-  <div class="container section has-text-centered">
+  <div class="section has-text-centered">
     Besoin de mes services ? Envoyez moi un mail à l'adresse suivante :
     <div class="section">
       <a href="mailto:yann@yineo.fr" class="button is-primary">yann@yineo.fr</a>
