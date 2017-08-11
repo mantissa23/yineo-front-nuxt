@@ -6,11 +6,11 @@
   "private": true,
   "dependencies": {
     "@nuxtjs/pwa": "^0.2.0",
-    "axios": "0.16.2",
+    "axios": "^0.16.2",
     "cachios": "1.0.6",
     "fs-extra": "3.0.1",
     "node-sass": "4.5.3",
-    "nuxt": "1.0.0-rc3",
+    "nuxt": "^1.0.0-rc4",
     "sass-loader": "6.0.5"
   },
   "scripts": {

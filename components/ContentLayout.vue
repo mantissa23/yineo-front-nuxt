@@ -7,6 +7,8 @@
       </div>
       <div class="column">
         <section class="section">
+          <TwitterFollowMe />
+          <hr />
           <slot name="sidebar"></slot>
         </section>
       </div>
@@ -18,8 +20,9 @@
 import AppHeader from '~/components/AppHeader'
 import AppFooter from '~/components/AppFooter'
 import AppNavigation from '~/components/AppNavigation'
+import TwitterFollowMe from '~/components/TwitterFollowMe'
 
 export default {
-  components: { AppFooter, AppHeader, AppNavigation }
+  components: { AppFooter, AppHeader, AppNavigation, TwitterFollowMe }
 }
 </script>

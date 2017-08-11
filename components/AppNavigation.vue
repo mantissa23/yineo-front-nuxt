@@ -2,18 +2,19 @@
   <div class="container">
     <nav class="navbar">
       <div class="navbar-brand">
+        
         <span class="navbar-item">
-         <img alt="Logo Yineo" src="~assets/images/logo-yineo.png" /> <span id="company-name">Y I N E O</span>
+       <img alt="Logo Yineo" src="~assets/images/logo-yineo.png" /> <span id="company-name">Y I N E O</span>
         </span>
-  
+
         <div @click="setMenuMobileIsOpened" :class="{'is-active': this.$store.state.menuMobileIsOpened}" class="navbar-burger" data-target="app-menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-  
+
       </div>
-  
+
       <!-- This "nav-menu" is hidden on mobile -->
       <!-- Add the modifier "is-active" to display it on mobile -->
       <div id="app-menu" class="navbar-menu" :class="{'is-active': this.$store.state.menuMobileIsOpened}">
@@ -23,7 +24,7 @@
           <nuxt-link to="/contact" class="navbar-item"> Contact </nuxt-link>
         </div>
       </div>
-  
+
     </nav>
   </div>
 </template>

@@ -3,7 +3,7 @@
     <Posts slot="content" :posts="paginatedPosts" />
     <PostsSidebar slot="sidebar" :posts="posts" />
   </ContentLayout>
-</template> 
+</template>
 
 <script>
 import ContentLayout from '~/components/ContentLayout'
