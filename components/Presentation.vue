@@ -7,11 +7,11 @@
         <div class="columns">
           <div class="column">
             <h2 class="title is-2">A propos</h2>
-            <p>Yann, développeur freelance fullStack, 8 ans d'expérience. J'ai commencé en tant que développeur PHP et je suis maintenant développeur
-              <strong>JavaScript</strong> spécialisé pricipalement en
+            <p>Yann, développeur depuis 2009. J'ai commencé en tant que développeur PHP et je suis maintenant développeur full stack spécialisé pricipalement en
+              <strong>JavaScript</strong> avec notamment
               <strong>Vue.js</strong>,
               <strong>Node</strong> et
-              <strong>React</strong>. Je met également en place des solutions CMS découplés avec Drupal 8 ou Wordpress.</p>
+              <strong>React</strong>. J'aide également à mettre place des solutions Drupal Headless avec Vue.js</p>
           </div>
           <div class="column is-one-third">
             <img id="photo" src="~assets/images/photo-small.jpg" />
@@ -36,15 +36,15 @@
       <div class="sub-section">
         <h2 class="title is-2">Travaux personnels</h2>
         <ul>
-          <li>Une calculette gratuite de charges sociales pour freelance :
-            <a href="http://eurl-app.fr"> http://eurl-app.fr</a>
+          <li>
+            <a href="http://eurl-app.fr"> http://eurl-app.fr</a> : Une calculette gratuite de charges sociales pour freelance :
           </li>
-          <li>Un client Vue.js & Nuxt.js pour "Contenta", la distribution Drupal API-first
-            <a href="https://contentavuenuxt.github.io">https://contentavuenuxt.github.io</a>
+          <li>
+            <a href="https://contentavuenuxt.github.io">https://contentavuenuxt.github.io</a> Le client Vue.js & Nuxt.js pour "Contenta CMS", la distribution Drupal 8 API-first
           </li>
         </ul>
       </div>
-
+  
     </section>
   </div>
 </template>
@@ -87,5 +87,9 @@ export default {
 
 .sub-section {
   margin-bottom: 2rem;
+}
+
+ul {
+  list-style-type: disc;
 }
 </style>
