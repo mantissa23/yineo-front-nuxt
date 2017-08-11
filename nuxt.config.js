@@ -19,11 +19,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Yineo - développement Vue.js, React, Node et JavaSctipt',
+    title: 'Yineo - développement Vue.js, React, Node et JavaScript',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'YINEO - développeur freelance full stack à Nantes' }
+      { hid: 'description', name: 'description', content: 'YINEO - développeur freelance à Nantes' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

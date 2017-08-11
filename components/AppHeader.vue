@@ -4,10 +4,10 @@
       <div class="container">
         <h1 class="title">
           Yann Boisselier <br />
-          Développeur freelance full-stack à Nantes
+          Développeur freelance à Nantes
         </h1>
         <h2 class="subtitle">
-          JavaScript, Vue.js, Nuxt.js, AngularJS, React, Node, PHP
+          Développeur full stack : JavaScript, Vue.js, Nuxt.js, AngularJS, React, Node, PHP
         </h2>
       </div>
     </div>
