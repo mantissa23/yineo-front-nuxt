@@ -12,9 +12,12 @@
         </div>
   
         <div class="column">
-          <TwitterFollowMe/>
-          <hr/>
-          <PostsSidebar :posts="posts" />
+          <section class="section">
+            <TwitterFollowMe/>
+            <hr/>
+            <h2 class="title is-2">Derniers billets</h2>
+            <PostsSidebar :posts="posts" />
+          </section>
         </div>
   
       </div>
