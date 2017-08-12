@@ -5,11 +5,15 @@ import Vuex from 'vuex'
  */
 const createStore = () => new Vuex.Store({
   state: {
-    menuMobileIsOpened: false
+    menuMobileIsOpened: false,
+    postsSidebar: []
   },
   mutations: {
     setMenuMobileIsOpened (state, value) {
       state.menuMobileIsOpened = value
+    },
+    setPostsSidebar (state, value) {
+      state.postsSidebar = value
     }
   }
 })

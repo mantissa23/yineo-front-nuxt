@@ -5,6 +5,7 @@ module.exports = {
 
   plugins: [
     '~/plugins/app', 
+    '~/plugins/hydrate-layout-data', 
     { src: '~/plugins/google-analytics', ssr: false }
   ],
   env: {

@@ -16,7 +16,7 @@
             <TwitterFollowMe/>
             <hr/>
             <h2 class="title is-2">Derniers billets</h2>
-            <PostsSidebar :posts="posts" />
+            <PostsSidebar :posts="this.$store.state.postsSidebar" />
           </section>
         </div>
   
@@ -36,13 +36,5 @@ import { getPosts } from '~/services/wpContentApi'
 
 export default {
   components: { AppHeader, AppNavigation, AppFooter, TwitterFollowMe, PostsSidebar },
-  data () {
-    return {
-      posts: []
-    }
-  },
-  async created () {
-    this.posts = await getPosts(10)
-  }
 }
 </script>
