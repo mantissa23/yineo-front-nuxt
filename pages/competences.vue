@@ -1,14 +1,11 @@
 <template>
-  <ContentLayout>
-    <timeline slot="content" />
-  </ContentLayout>
+  <Timeline />
 </template>
 
 <script>
-import timeline from '~/components/Timeline'
-import ContentLayout from '~/components/ContentLayout'
+import Timeline from '~/components/Timeline'
 export default {
   transition: 'fade',
-  components: { timeline, ContentLayout }
+  components: { Timeline }
 }
 </script>

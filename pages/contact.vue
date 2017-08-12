@@ -1,13 +1,11 @@
 <template>
-  <ContentLayout>
-    <Contact slot="content" />
-  </ContentLayout>
+  <Contact />
 </template>
 
 <script>
-import ContentLayout from '~/components/ContentLayout'
 import Contact from '~/components/Contact'
+
 export default {
-  components: { ContentLayout, Contact }
+  components: { Contact },
 }
 </script>
