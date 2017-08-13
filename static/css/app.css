@@ -31,6 +31,13 @@ figure {
   display: none
 }
 
+/* wordpress content fixes */
 .youtube-player {
   width: 100%
+}
+
+figcaption {
+  color: #777;
+  margin-bottom:2rem;
+  background: rgb(240, 240, 240)
 }
