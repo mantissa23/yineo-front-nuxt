@@ -1,5 +1,10 @@
+<!-- display page for a specific tag -->
 <template>
-  <Posts :posts="paginatedPostsByTagId" />
+  <div class="section">
+    <em>Les articles classés : </em>
+    <h1 class="title is-1"> {{tag.name}} </h1>
+    <Posts :posts="paginatedPostsByTagId" />
+  </div>
 </template> 
 
 <script>

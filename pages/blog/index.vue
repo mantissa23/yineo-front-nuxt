@@ -1,5 +1,5 @@
 <template>
-  <Posts :posts="paginatedPosts" />
+  <Posts :posts="posts" />
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
   components: { Posts },
   async asyncData (params) {
     return {
-      paginatedPosts: await getPaginatedPosts(10, params.query ? params.query.page : 1),
+      posts: await getPaginatedPosts(10, params.query ? params.query.page : 1),
     }
   }
 }

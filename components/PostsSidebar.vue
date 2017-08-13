@@ -3,7 +3,7 @@
   <ul class="posts">
     <div v-for="post in posts" class="post">
       <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }">
-        <li class="" v-html="post.title.rendered"></li>
+        <li><h3 v-html="post.title.rendered"></h3></li>
       </nuxt-link>
     </div>
   </ul>

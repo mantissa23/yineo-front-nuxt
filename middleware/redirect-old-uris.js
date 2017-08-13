@@ -1,3 +1,6 @@
+/**
+ * Redirect old uris (wordpress front-end) to new uris (nuxt ones)
+ */
 export default function (context) {
   oldUris.find((element) => {
     if (context.route.path === element) {
@@ -7,9 +10,6 @@ export default function (context) {
   })
 }
 
-/**
- * Uris when the blog was displayed by wordpress
- */
 const oldUris = [
   '/2016/04/19/jsonp-avec-apache-solr-et-angular-js/',
   '/2016/05/03/apprendre-git-en-samusant/',

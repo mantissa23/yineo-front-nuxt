@@ -1,7 +1,7 @@
 <!-- Display a full post object -->
 <template>
   <section class="post section">
-    <h1 class="title is-3" v-html="post.title.rendered"></h1>
+    <h1 class="title is-1" v-html="post.title.rendered"></h1>
     <div class="featured-media">
       <img :src="post.featured_media_url" />
     </div>
