@@ -6,26 +6,16 @@
       <img :src="post.featured_media_url" />
     </div>
     <div v-html="post.content.rendered" class="content"></div>
-    <div v-if="post._embedded['wp:term'][1]" class="tags">
-      <ul>
-        <li class="tag is-medium is-primary" v-for="tag in post._embedded['wp:term'][1]">
-          <nuxt-link :to="{ name: 'tag-slug', params: { slug: tag.slug } }"> {{tag.name}} </nuxt-link>
-        </li>
-      </ul>
-    </div>
+    <TagsLinks v-if="post._embedded['wp:term'][1]" :tags="post._embedded['wp:term'][1]" />
   </section>
 </template>
 
 <script>
+import TagsLinks from '~/components/TagsLinks'
 export default {
+  components: { TagsLinks },
   props: {
     post: { type: Object, default: {} }
   }
 }
 </script>
-
-<style scoped>
-.tag a {
-  color:white
-}
-</style>
