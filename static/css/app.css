@@ -32,8 +32,8 @@ figure {
 }
 
 /* wordpress content fixes */
-.youtube-player {
-  width: 100%
+figure, .youtube-player {
+  max-width: 100% !important
 }
 
 figcaption {
