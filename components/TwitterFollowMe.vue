@@ -9,11 +9,9 @@
 .logo-twitter {
   height: 3rem;
 }
-
 a {
   position: relative;
   top: -1rem;
 }
-
 </style>
 
