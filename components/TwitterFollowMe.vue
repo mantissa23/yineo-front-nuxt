@@ -1,9 +1,19 @@
 <template>
   <div>
-    <em>Me suivre sur twitter </em><br />
-    <a class="button is-info" href="https://twitter.com/yineofr">
-      @yineofr
-    </a>
+    <a href="https://twitter.com/yineofr">Suivre @yineofr sur twitter </a>
+    <img class="logo-twitter" src="~/assets/images/logo-twitter.png" />
   </div>
 </template>
+
+<style scoped>
+.logo-twitter {
+  height: 3rem;
+}
+
+a {
+  position: relative;
+  top: -1rem;
+}
+
+</style>
 
