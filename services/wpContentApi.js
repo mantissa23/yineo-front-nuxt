@@ -2,7 +2,7 @@
  * Get content from wordpress via REST Api
  */
 const endpoint = process.env.wordpressApiBaseUrl
-const cachios = require('cachios')
+const cachios = require('axios')
 
 cachios.getResponseCopy = function (response) {
   return {
