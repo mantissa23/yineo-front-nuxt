@@ -1,4 +1,4 @@
-html {
+body {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
@@ -16,14 +16,38 @@ figure {
   max-width: 900px
 }
 
-/* PAGE TRANSITIONS */
+/* Page transitions */
+.column.is-two-thirds {
+  position:relative;
+}
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s
+/* during entering and leaving : */
+.page-enter-active, .page-leave-active {
+  position:absolute;
+  max-width:725.328px;
+  transition: all .2s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  opacity: 0
+
+/* entering start */
+.page-enter {
+  left: -100%;
 }
+
+/* entering end */
+.page-enter-to {
+  left: 0;
+}
+
+/* leaving start */
+.page-leave {
+  opacity: 1;
+}
+
+/* leaving end */
+.page-leave-to {
+  opacity: 0;
+}
+
 
 /* hide "Read more" native wordpress link from post teasers */
 .posts .more-link {

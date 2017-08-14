@@ -7,7 +7,7 @@ import Presentation from '~/components/Presentation'
 import { getPosts } from '~/services/wpContentApi'
 
 export default {
-  transition: 'fade',
+  transition: 'page',
   components: { Presentation },
   async asyncData () {
     return {

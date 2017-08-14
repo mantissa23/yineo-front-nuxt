@@ -5,7 +5,7 @@
 <script>
 import Timeline from '~/components/Timeline'
 export default {
-  transition: 'fade',
+  transition: 'page',
   components: { Timeline }
 }
 </script>

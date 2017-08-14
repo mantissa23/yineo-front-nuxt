@@ -12,7 +12,7 @@ import Posts from '~/components/Posts.vue'
 import { getTagBySlug, getPaginatedPostsByTagId } from '~/services/wpContentApi'
 
 export default {
-  transition: 'fade',
+  transition: 'page',
   components: { Posts },
   async asyncData ({ params, query }) {
     const tag = await getTagBySlug(params.slug)

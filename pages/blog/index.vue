@@ -7,7 +7,7 @@ import Posts from '~/components/Posts.vue'
 import { getPaginatedPosts } from '~/services/wpContentApi'
 
 export default {
-  transition: 'fade',
+  transition: 'page',
   components: { Posts },
   async asyncData (params) {
     return {
