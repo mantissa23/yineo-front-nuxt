@@ -8,20 +8,25 @@
       <div class="columns">
   
         <div class="column is-two-thirds">
-          <nuxt/>
+          <div class="mobile-padding">
+            <nuxt/>
+          </div>
         </div>
   
         <div class="column">
           <section class="section">
-            <TwitterFollowMe/>
-            <hr/>
-            <h2 class="title is-2">Derniers billets</h2>
-            <PostsSidebar :posts="this.$store.state.postsSidebar" />
+            <div class="mobile-padding">
+              <TwitterFollowMe/>
+              <hr/>
+              <h2 class="title is-2">Derniers billets</h2>
+              <PostsSidebar :posts="this.$store.state.postsSidebar" />
+            </div>
           </section>
         </div>
   
       </div>
     </div>
+  
     <AppFooter />
   </div>
 </template>
@@ -38,3 +43,11 @@ export default {
   components: { AppHeader, AppNavigation, AppFooter, TwitterFollowMe, PostsSidebar },
 }
 </script>
+
+<style scoped>
+@media screen and (max-width: 1008px) {
+  .mobile-padding {
+    padding: 24px;
+  }
+}
+</style>
