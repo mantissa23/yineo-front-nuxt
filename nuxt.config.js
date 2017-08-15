@@ -24,6 +24,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'google-site-verification', content: 'YgD-3ccRebKxZ-IAL0a89Dh2B6k2s4LVUGcWtseLTmw' },
       { hid: 'description', name: 'description', content: 'YINEO - développeur freelance à Nantes' }
     ],
     link: [
