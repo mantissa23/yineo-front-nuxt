@@ -5,7 +5,16 @@
     <div class="sub-section">
       <div class="columns">
         <div class="column">
+          <h1 class="title">
+            Yann Boisselier <br />
+            Développeur freelance à Nantes
+          </h1>
+          <h2 class="subtitle">
+            Développeur full stack : JavaScript, Vue.js, Nuxt.js, AngularJS, React, Node, PHP
+          </h2>
+          
           <h2 class="title is-2">A propos</h2>
+          
           <p>Yann, développeur depuis 2009. J'ai commencé en tant que développeur PHP et je suis maintenant développeur full stack spécialisé pricipalement en
             <strong>JavaScript</strong> avec notamment
             <strong>Vue.js</strong>,
