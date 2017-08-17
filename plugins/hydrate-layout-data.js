@@ -7,6 +7,6 @@ import { getPosts } from '~/services/wpContentApi'
  * ( layouts does not have an asyncData() method )
  */
 export default async function( { store } ) {
-  let posts = await getPosts(20)
-  store.commit('setPostsSidebar', posts)
+  //  let posts = await getPosts(20)
+  //  store.commit('setPostsSidebar', posts)
 }

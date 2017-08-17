@@ -1,12 +1,19 @@
 <template>
-  <Presentation />
+  <Presentation :posts="posts" />
 </template>
 
 <script>
 import Presentation from '~/components/Presentation'
+import { getPosts } from '~/services/wpContentApi'
 
 export default {
   transition: 'page',
-  components: { Presentation }
+  components: { Presentation },
+  async asyncData () {
+    const posts = await getPosts(2)
+    return {
+      posts
+    }
+  }
 }
 </script>
