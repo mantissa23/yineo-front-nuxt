@@ -90,6 +90,16 @@
 </template>
 
 
+<script>
+import PostsHomepage from '~/components/PostsHomepage'
+export default {
+  components: { PostsHomepage },
+  props: {
+    posts: { type : Array, default: () => [] }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
   
   @import "../assets/css/app.scss";
