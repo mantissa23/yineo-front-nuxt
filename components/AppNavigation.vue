@@ -9,9 +9,8 @@
         
         <div @click="setMenuMobileIsOpened" :class="{'is-active': this.$store.state.menuMobileIsOpened}"
              class="navbar-burger" data-target="app-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <img alt="Logo Yineo" src="~/assets/src/Yineo_burger.svg" class="yineo-burger" />
+        
         </div>
       
       </div>
@@ -55,7 +54,28 @@
   }
   
   /* Create slide animation on mobile */
-  @media screen and (max-width : 999px) {
+  @media screen and (max-width : 1007px) {
+    
+    .navbar-item {
+      img {
+        height     : 2.75rem;
+        max-height : 2.75rem;
+      }
+    }
+    
+    .navbar-burger {
+      cursor      : pointer;
+      display     : block;
+      height      : 4rem;
+      position    : relative;
+      width       : 3.25rem;
+      margin-left : auto;
+      
+      img {
+        height : 2rem;
+        margin : 1.25rem 0 0 .6rem;
+      }
+    }
     
     .navbar-end {
       padding : 0.5rem 1rem;

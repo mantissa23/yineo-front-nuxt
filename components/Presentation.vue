@@ -103,17 +103,15 @@
   }
   
   .clients {
-    list-style     : none;
-    display        : flex;
-    flex-direction : row;
-    
-    > li {
-      flex-direction : row;
-    }
+    list-style      : none;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    flex-direction  : row;
   }
   
   .client-logo {
-    max-width : 60px;
+    max-width : 2.5rem;
     margin    : .5rem;
   }
 
