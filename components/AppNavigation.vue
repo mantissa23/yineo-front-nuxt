@@ -46,7 +46,7 @@
   
   .navbar-menu {
     border-style : solid;
-    border-color : $orange;
+    border-color : $white-ter;
     border-width : thin 0;
   }
   

@@ -1,103 +1,99 @@
 <!-- Short presentation about me -->
 <template>
-  <section class="section">
-    
-    <div class="sub-section">
-      <div class="columns">
-        <div class="column">
-          <h1 class="title">
-            Yann Boisselier <br />
-            Développeur freelance à Nantes
+  
+  <div class="columns">
+    <div class="column">
+      
+      <section class="hero section">
+        <div class="hero-body">
+          
+          <h1 class="title is-1">
+            Yann Boisselier
+          
           </h1>
-          <h2 class="subtitle">
-            Développeur full stack : JavaScript, Vue.js, Nuxt.js, AngularJS, React, Node, PHP
+          <h2 class="subtitle is-3">
+            Développeur <span class="is-red">freelance</span> à Nantes.<br>
           </h2>
-          
-          <h2 class="title is-2">A propos</h2>
-          
-          <p>Yann, développeur depuis 2009. J'ai commencé en tant que développeur PHP et je suis maintenant développeur full stack spécialisé pricipalement en
-            <strong>JavaScript</strong> avec notamment
-            <strong>Vue.js</strong>,
-            <strong>Node</strong> et
-            <strong>React</strong>. J'aide également à mettre place des solutions Drupal Headless avec Vue.js</p>
+        
         </div>
-        <div class="column is-one-third">
-          <img id="photo" src="~assets/images/photo-small.jpg" />
-        </div>
+      </section>
+      <section class="content is-medium">
+        <blockquote>
+          
+          
+          Je m'appelle Yann, développeur Web depuis 2009, spécialisé dans les technologies <strong>JavaScript</strong>
+          telles que
+          
+          <strong>Vue.js</strong>,
+          <strong>Nuxt.js</strong>,
+          <strong>React</strong>,
+          <strong>Next.js</strong>,
+          <strong>Node</strong>,
+          <strong>Angular</strong> et
+          <strong>GraphQL</strong>
+          <br>
+        </blockquote>
+      </section>
+      
+      <section class="section content">
+        <h2 class="title is-3">Travaux personnels</h2>
+        <ul>
+          <li>
+            <a href="http://eurl-app.fr"> http://eurl-app.fr</a>
+            : Une calculette gratuite de charges sociales pour freelance :
+          </li>
+          <li>
+            <a href="https://contentavuenuxt.github.io">https://contentavuenuxt.github.io</a>
+            Le client Vue.js & Nuxt.js pour "Contenta CMS", la distribution Drupal 8 API-first
+          </li>
+        </ul>
+      </section>
+    
+    </div>
+    <div class="column is-one-quarter">
+      <img class="photo" src="~/assets/images/photo-small.jpg" />
+      
+      <div class="sub-section">
+        <h2 class="title is-4">Ils m'ont fait confiance</h2>
+        <ul class="clients">
+          <li>
+            <img src="~/assets/images/France_24_logo.svg"
+                 class="client-logo"
+                 alt="France 24"
+                 title="France 24" />
+          </li>
+          <li><img src="~/assets/images/France_inter_logo.svg" class="client-logo" alt="" title="" /></li>
+          <li><img src="~/assets/images/Radio_France_logo.svg" class="client-logo" alt="" title="" /></li>
+          <li><img src="~/assets/images/RFI_logo.svg" class="client-logo" alt="" title="" /></li>
+        </ul>
       </div>
     </div>
-  
-    <div class="sub-section">
-      <h2 class="title is-2">Compétences</h2>
-      <div class="tags">
-        <span class="tag is-light is-medium" v-for="competence in competences">
-          {{competence}}
-        </span>
-      </div>
-    </div>
-  
-    <div class="sub-section">
-      <h2 class="title is-2">Ils m'ont fait confiance</h2>
-      <div>Radiofrance, France Inter, France 24, RFI</div>
-    </div>
-  
-    <div class="sub-section">
-      <h2 class="title is-2">Travaux personnels</h2>
-      <ul>
-        <li>
-          <a href="http://eurl-app.fr"> http://eurl-app.fr</a> : Une calculette gratuite de charges sociales pour freelance :
-        </li>
-        <li>
-          <a href="https://contentavuenuxt.github.io">https://contentavuenuxt.github.io</a> Le client Vue.js & Nuxt.js pour "Contenta CMS", la distribution Drupal 8 API-first
-        </li>
-      </ul>
-    </div>
-  
-  </section>
+  </div>
+
 </template>
 
-<script>
-export default {
-  props: {
-    posts: { type: Array, default: () => [] }
-  },
-  data () {
-    return {
-      competences: [
-        'JavaScript',
-        'Vue.js',
-        'Nuxt.js',
-        'React.js',
-        'Next.js',
-        'Node.js',
-        'Webpack',
-        'MongoDB',
-        'REST API',
-        'GraphQL',
-        'Bulma',
-        'Foundation',
-        'Bootstrap',
-        'PHP',
-        'Drupal découplé',
-        'Linux',
-        'Scrum',
-        'Lean start-up'
-      ]
-    }
-  }
-}
-</script>
 
 <style scoped>
-#photo {
-  height: 200px;
-}
-
-.sub-section {
-  margin-bottom: 2rem;
-}
-
-ul {
-  list-style-type: disc;
-}
+  .photo {
+    height : 200px;
+  }
+  
+  .clients {
+    list-style     : none;
+    display        : flex;
+    flex-direction : row;
+  }
+  
+  .clients > li {
+    flex-direction : row;
+  }
+  
+  .client-logo {
+    max-width : 60px;
+    margin: .5rem;
+  }
+  
+  ul {
+    list-style-type : disc;
+  }
 </style>
