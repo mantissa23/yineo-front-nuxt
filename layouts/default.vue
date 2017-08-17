@@ -1,8 +1,8 @@
 <!-- main layout -->
 <template>
   <div>
-    <AppNavigation />
     <AppHeader/>
+    <AppNavigation />
   
     <div class="container">
       <div class="columns">

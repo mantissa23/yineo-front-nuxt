@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-primary">
+  <section class="hero is-primary is-hidden-mobile is-hidden-touch">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
