@@ -51,10 +51,12 @@
     
     </div>
     <div class="column is-one-quarter">
-      <img class="photo" src="~/assets/images/photo-small.jpg" />
-      
-      <div class="sub-section">
-        <h2 class="title is-4">Ils m'ont fait confiance</h2>
+      <section class="section has-text-centered">
+        <img class="photo" src="~/assets/images/photo-square.jpg" />
+        
+        <h2 class="title is-4">
+          Ils m'ont fait confiance
+        </h2>
         <ul class="clients">
           <li>
             <img src="~/assets/images/France_24_logo.svg"
@@ -62,38 +64,57 @@
                  alt="France 24"
                  title="France 24" />
           </li>
-          <li><img src="~/assets/images/France_inter_logo.svg" class="client-logo" alt="" title="" /></li>
-          <li><img src="~/assets/images/Radio_France_logo.svg" class="client-logo" alt="" title="" /></li>
-          <li><img src="~/assets/images/RFI_logo.svg" class="client-logo" alt="" title="" /></li>
+          <li>
+            <img src="~/assets/images/France_inter_logo.svg"
+                 class="client-logo"
+                 alt="France Inter"
+                 title="France Inter" />
+          </li>
+          <li>
+            <img src="~/assets/images/Radio_France_logo.svg"
+                 class="client-logo"
+                 alt="Radio France"
+                 title="Radio France" />
+          </li>
+          <li>
+            <img src="~/assets/images/RFI_logo.svg"
+                 class="client-logo"
+                 alt="rfi"
+                 title="rfi" />
+          </li>
         </ul>
-      </div>
+      </section>
     </div>
   </div>
 
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
+  
+  @import "../assets/css/app.scss";
+  
   .photo {
-    height : 200px;
+    max-height    : 300px;
+    border        : 10px solid $white;
+    border-radius : 10rem;
+    box-shadow    : 2px 2px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom : 2rem;
   }
   
   .clients {
     list-style     : none;
     display        : flex;
     flex-direction : row;
-  }
-  
-  .clients > li {
-    flex-direction : row;
+    
+    > li {
+      flex-direction : row;
+    }
   }
   
   .client-logo {
     max-width : 60px;
-    margin: .5rem;
+    margin    : .5rem;
   }
-  
-  ul {
-    list-style-type : disc;
-  }
+
 </style>
