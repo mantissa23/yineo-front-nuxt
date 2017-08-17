@@ -31,21 +31,22 @@
 </template>
 
 <script>
-    export default {
-        methods: {
-            setMenuMobileIsOpened () {
-                console.log(this.$store.state)
-                this.$store.commit('setMenuMobileIsOpened', !this.$store.state.menuMobileIsOpened)
-            }
-        }
+  export default {
+    methods: {
+      setMenuMobileIsOpened () {
+        console.log(this.$store.state)
+        this.$store.commit('setMenuMobileIsOpened', !this.$store.state.menuMobileIsOpened)
+      }
     }
+  }
 </script>
 
-<style scoped>
+<style lang="scss">
+  @import "../assets/css/app.scss";
   
   .navbar-menu {
     border-style : solid;
-    border-color : #efefef;
+    border-color : $orange;
     border-width : thin 0;
   }
   
@@ -57,7 +58,7 @@
   @media screen and (max-width : 999px) {
     
     .navbar-end {
-      padding      : 0.5rem 1rem;
+      padding : 0.5rem 1rem;
     }
     
     .navbar-menu {
