@@ -4,8 +4,8 @@
 module.exports = {
 
   plugins: [
-    '~/plugins/app', 
-    '~/plugins/hydrate-layout-data', 
+    '~/plugins/app',
+    '~/plugins/hydrate-layout-data',
     { src: '~/plugins/google-analytics', ssr: false }
   ],
   env: {
@@ -15,6 +15,13 @@ module.exports = {
   router: {
     middleware: ['redirect-old-uris']
   },
+  css: [
+    'bulma',
+    // CSS file in the project
+    '@/assets/css/app.css',
+    // SCSS file in the project
+    '@/assets/css/app.scss'
+  ],
 
   /*
   ** Headers of the page
@@ -29,8 +36,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: '/css/bulma-0.5.0.css' },
-      { rel: 'stylesheet', type: 'text/css', href: '/css/app.css' },
+      { rel: 'stylesheet', type: 'text/css', href: '/css/app.css' } 
     ],
     script: [
       //  {  type: 'text/javascript', src: '/js/highlight.pack.js' },
