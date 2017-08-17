@@ -89,11 +89,8 @@
 
 </template>
 
-
 <script>
-import PostsHomepage from '~/components/PostsHomepage'
 export default {
-  components: { PostsHomepage },
   props: {
     posts: { type : Array, default: () => [] }
   }
