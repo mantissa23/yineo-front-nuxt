@@ -8,6 +8,7 @@ import Post from '~/components/Post'
 
 export default {
   transition: 'page',
+  layout: 'post',
   components: { Post },
   async asyncData (params) {
     return {

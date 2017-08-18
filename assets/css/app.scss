@@ -15,6 +15,34 @@ $primary : $red;
   padding : 3rem 0
 }
 
+@media screen and (max-width: 769px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+.container.is-fluid {
+  margin-left  : 0;
+  margin-right : 0;
+}
+
+.container.is-narrow {
+  max-width : 750px;
+
+  .post.section {
+    .content {
+      > p {
+        font-size   : 1.1rem;
+        line-height : 2;
+        margin      : 1.5rem auto;
+
+        > .embed-youtube {
+          margin: 2rem 0;
+        }
+      }
+    }
+  }
+}
 /* Page transitions */
 .column.is-two-thirds {
   position : relative;
@@ -71,3 +99,5 @@ figcaption {
   margin-bottom : 2rem;
   background    : $white-ter;
 }
+
+
