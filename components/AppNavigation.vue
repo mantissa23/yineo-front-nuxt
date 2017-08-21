@@ -41,7 +41,7 @@
 </script>
 
 <style lang="scss">
-  @import "../assets/css/app.scss";
+    @import "../assets/css/variables.scss";
   
   .navbar-menu {
     border-style : solid;
