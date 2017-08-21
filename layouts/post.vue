@@ -4,9 +4,8 @@
     <AppHeader />
     <AppNavigation />
     
-    <div class="container">
-      <nuxt />
-    </div>
+    <nuxt />
+    
     
     <AppFooter />
   </div>
