@@ -5,11 +5,8 @@
   "author": "yann <yann.boisselier@gmail.com>",
   "private": true,
   "dependencies": {
-    "@nuxtjs/pwa": "^0.2.0",
     "axios": "^0.16.2",
     "bulma": "^0.5.1",
-    "cachios": "1.0.6",
-    "fs-extra": "3.0.1",
     "nuxt": "^1.0.0-rc4"
   },
   "scripts": {
