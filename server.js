@@ -9,6 +9,8 @@ const config = require('./nuxt.config.js')
 config.dev = !isProd
 const nuxt = new Nuxt(config)
 
+//  app.get('/cache-api/posts', (req, res) => res.send('hello'))
+
 // Render every route with nuxt.js
 app.use(nuxt.render)
 
