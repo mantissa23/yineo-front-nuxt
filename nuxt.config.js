@@ -16,7 +16,7 @@ module.exports = {
     middleware: ['redirect-old-uris']
   },
   css: [
-     // '@/assets/css/app.scss'
+    '@/assets/css/app.scss'
   ],
 
   /*

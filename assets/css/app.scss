@@ -1,7 +1,4 @@
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-
-$red : #a3001f;
-$primary : $red;
+@import "variables";
 
 .is-red {
   color: $red;
@@ -53,10 +50,6 @@ $primary : $red;
   /* during entering and leaving : */
   .page-enter-active,
   .page-leave-active {
-    /*
-    position   : absolute;
-    max-width  : 725.328px;
-    */
     transition : all .2s ease;
   }
 

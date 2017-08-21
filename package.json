@@ -7,7 +7,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bulma": "^0.5.1",
-    "nuxt": "^1.0.0-rc4"
+    "nuxt": "^1.0.0-rc5"
   },
   "scripts": {
     "dev": "node_modules/.bin/nuxt",
