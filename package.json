@@ -7,12 +7,13 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bulma": "^0.5.1",
+    "express": "^4.15.4",
     "nuxt": "^1.0.0-rc5"
   },
   "scripts": {
-    "dev": "node_modules/.bin/nuxt",
+    "dev": "node server.js",
     "build": "node_modules/.bin/nuxt build",
-    "start": "node_modules/.bin/nuxt start",
+    "start": "NODE_ENV=production node server.js",
     "generate": "node_modules/.bin/nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
