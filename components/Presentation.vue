@@ -97,13 +97,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  
-  @import "../assets/css/variables.scss";
+<style scoped>
+
   
   .photo {
     max-height    : 300px;
-    border        : 10px solid $white;
+    border        : 10px solid white;
     border-radius : 10rem;
     box-shadow    : 2px 2px 15px rgba(0, 0, 0, 0.15);
     margin-bottom : 2rem;
