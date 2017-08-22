@@ -1,13 +1,3 @@
-<!--
-Create automatically a Bulma css Grid from :items 
-USAGE :
-<BulmaGrid :items="yourItems" itemsByRow="3">
-  <template scope="row">
-    <recipe-card :node="row.item"></recipe-card>
-  </template>
-</BulmaGrid>
--->
-
 <template>
   <div>
     <div class="columns" v-for="(column, rowIndex) in columns" :key="rowIndex">
