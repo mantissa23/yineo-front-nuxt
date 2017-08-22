@@ -1,4 +1,7 @@
 module.exports = {
+  serverMiddleware: [
+    { path: '/cache', handler: '~/services/cache.js' }
+  ],
   plugins: [
     '~/plugins/app',
     '~/plugins/hydrate-layout-data',
@@ -11,9 +14,6 @@ module.exports = {
   router: {
     middleware: ['redirect-old-uris']
   },
-  serverMiddleware: [
-    { path: '/cache', handler: '~/services/cache.js' }
-  ],
   /*
   ** Headers of the page
   */
