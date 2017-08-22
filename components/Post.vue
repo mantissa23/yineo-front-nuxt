@@ -8,7 +8,7 @@
         </div>
       </section>
     </div>
-    
+
     <div class="container is-narrow">
       <section class="post section">
         <div v-html="post.content.rendered" class="content"></div>
@@ -19,34 +19,28 @@
 </template>
 
 <script>
-  import TagsLinks from '~/components/TagsLinks'
-  export default {
-    components: {TagsLinks},
-    props: {
-      post: {type: Object, default: {}}
-    }
+import TagsLinks from '~/components/TagsLinks'
+export default {
+  components: { TagsLinks },
+  props: {
+    post: { type: Object, default: {} }
   }
+}
 </script>
 
-<style lang="scss" scoped>
-  @import "../assets/css/app.scss";
-  
-  .hero-title {
-    .hero-body {
-      padding             : 4rem 0;
-      background-position : center;
-      background-repeat   : no-repeat;
-      background-size     : cover;
-    }
-    
-    .title {
-      color            : $white;
-      background-color : rgba(0, 0, 0, .5);
-      padding          : 1rem;
-      text-shadow      : 1px 1px 1px rgba(0, 0, 0, .5);
-      text-align       : center;
-    }
-  }
+<style scoped>
+.hero-title .hero-body {
+  padding: 4rem 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-
+.hero-title .title {
+  color: white;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  text-align: center;
+}
 </style>

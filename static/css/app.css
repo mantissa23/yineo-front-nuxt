@@ -1,13 +1,14 @@
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-
-$red : #a3001f;
-$primary : $red;
-
-.is-red {
-  color: $red;
+.button.is-primary {
+  background-color: #a3001f;
 }
 
-@import "../../node_modules/bulma/bulma";
+.button.is-primary:hover, .button.is-primary.is-hovered {
+  background-color: #a3001f;
+}
+
+a {
+  color: #a3001f
+}
 
 /* structure */
 
@@ -28,21 +29,18 @@ $primary : $red;
 
 .container.is-narrow {
   max-width : 750px;
-
-  .post.section {
-    .content {
-      > p {
-        font-size   : 1.1rem;
-        line-height : 2;
-        margin      : 1.5rem auto;
-
-        > .embed-youtube {
-          margin: 2rem 0;
-        }
-      }
-    }
-  }
 }
+
+.container.is-narrow .post.section .content p {
+  font-size   : 1.1rem;
+  line-height : 2;
+  margin      : 1.5rem auto;
+}
+      
+.container.is-narrow .post.section .content .embed-youtube {
+  margin: 2rem 0;
+}
+
 /* Page transitions */
 .column.is-two-thirds {
   position : relative;
@@ -53,10 +51,6 @@ $primary : $red;
   /* during entering and leaving : */
   .page-enter-active,
   .page-leave-active {
-    /*
-    position   : absolute;
-    max-width  : 725.328px;
-    */
     transition : all .2s ease;
   }
 
@@ -95,9 +89,9 @@ figure,
 }
 
 figcaption {
-  color         : $grey;
+  color         : darkgray;
   margin-bottom : 2rem;
-  background    : $white-ter;
+  background    : hsl(0, 0%, 96%);
 }
 
 

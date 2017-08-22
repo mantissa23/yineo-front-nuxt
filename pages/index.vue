@@ -10,7 +10,7 @@ export default {
   transition: 'page',
   components: { Presentation },
   async asyncData () {
-    const posts = await getPosts(2)
+    const posts = await getPosts(4)
     return {
       posts
     }

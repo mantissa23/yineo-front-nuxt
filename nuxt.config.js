@@ -16,7 +16,7 @@ module.exports = {
     middleware: ['redirect-old-uris']
   },
   css: [
-     '@/assets/css/app.scss'
+   // '@/assets/css/app.scss'
   ],
 
   /*
@@ -31,7 +31,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'YINEO - développeur freelance à Nantes' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'stylesheet', href: '/css/bulma-5.1.css' },
+      { rel: 'stylesheet', href: '/css/app.css' }
     ],
     script: [
       //  {  type: 'text/javascript', src: '/js/highlight.pack.js' },
