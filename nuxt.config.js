@@ -1,8 +1,4 @@
-/**
- * Generate routes like ""/posts/xxxxx" so that nuxtjs can generate them
- */
 module.exports = {
-
   plugins: [
     '~/plugins/app',
     '~/plugins/hydrate-layout-data',
@@ -15,10 +11,9 @@ module.exports = {
   router: {
     middleware: ['redirect-old-uris']
   },
-  css: [
-   // '@/assets/css/app.scss'
+  serverMiddleware: [
+    { path: '/cache', handler: '~/services/cache.js' }
   ],
-
   /*
   ** Headers of the page
   */
@@ -33,9 +28,6 @@ module.exports = {
     link: [
       { rel: 'stylesheet', href: '/css/bulma-5.1.css' },
       { rel: 'stylesheet', href: '/css/app.css' }
-    ],
-    script: [
-      //  {  type: 'text/javascript', src: '/js/highlight.pack.js' },
     ]
   },
   /*
