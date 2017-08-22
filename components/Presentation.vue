@@ -11,11 +11,11 @@
       </div>
     </div>
 
-    <div class="section content">
+    <div class="section content posts">
       <h2 class="title is-3">Derniers articles</h2>
       <BulmaGrid :items="posts" itemsByRow="2">
         <template scope="row">
-          <PostTeaser :post="row.item" />
+          <PostTeaserHomepage :post="row.item" />
         </template>
       </BulmaGrid>
     </div>
@@ -24,11 +24,11 @@
 
 <script>
 import BulmaGrid from '~/components/BulmaGrid'
-import PostTeaser from '~/components/PostTeaser'
+import PostTeaserHomepage from '~/components/PostTeaserHomepage'
 import PresentationColumnLeft from '~/components/PresentationColumnLeft'
 import PresentationColumnRight from '~/components/PresentationColumnRight'
 export default {
-  components: { BulmaGrid, PostTeaser, PresentationColumnLeft, PresentationColumnRight },
+  components: { BulmaGrid, PostTeaserHomepage, PresentationColumnLeft, PresentationColumnRight },
   props: {
     posts: { type: Array, default: () => [] }
   }
