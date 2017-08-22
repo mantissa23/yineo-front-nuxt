@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "node_modules/.bin/nuxt build",
-    "start": "NODE_ENV=production node server.js",
+    "build": "node_modules/.bin/nuxt start",
     "generate": "node_modules/.bin/nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
