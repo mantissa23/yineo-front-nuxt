@@ -99,7 +99,7 @@ export default {
 
 <style lang="scss" scoped>
   
-  @import "../assets/css/app.scss";
+  @import "../assets/css/variables.scss";
   
   .photo {
     max-height    : 300px;

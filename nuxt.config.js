@@ -31,7 +31,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'YINEO - développeur freelance à Nantes' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'stylesheet', href: '/css/app.css' }
     ],
     script: [
       //  {  type: 'text/javascript', src: '/js/highlight.pack.js' },
