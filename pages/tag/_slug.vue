@@ -9,7 +9,7 @@
 
 <script>
 import Posts from '~/components/Posts.vue'
-import { getTagBySlug, getPaginatedPostsByTagId } from '~/services/wpContentApi'
+import { getTagBySlug, getPaginatedPosts } from '~/services/wpContentApi'
 
 export default {
   transition: 'page',
@@ -18,7 +18,7 @@ export default {
     const tag = await getTagBySlug(params.slug)
     return {
       tag,
-      paginatedPostsByTagId: await getPaginatedPostsByTagId(10, query ? query.page : 1, tag.id)
+      paginatedPostsByTagId: await getPaginatedPosts(10, query ? query.page : 1, tag.id)
     }
   }
 }
