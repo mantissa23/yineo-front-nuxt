@@ -7,6 +7,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bulma": "^0.5.1",
+    "cachios": "^1.0.6",
     "nuxt": "^1.0.0-rc6"
   },
   "scripts": {

@@ -12,7 +12,7 @@ const axios = require('axios')
  * 
  * @return {object}
  */
-export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = null) => {
+exports.getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = null) => {
   let url = endpoint + '/posts?per_page=' + perPage + '&page=' + pageNumber
   if (tagId) {
     url += `&tags=${tagId}`
@@ -26,17 +26,17 @@ export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = nu
   return result
 }
 
-export const getPosts = async (perPage = 10) => {
+exports.getPosts = async (perPage = 10) => {
   const response = await axios.get(endpoint + '/posts?per_page=' + perPage)
   return response.data
 }
 
-export const getPostBySlug = async (slug) => {
+exports.getPostBySlug = async (slug) => {
   const {data} = await axios.get(endpoint + '/posts?_embed&slug=' + slug)
   return data[0]
 }
 
-export const getTagBySlug = async (slug) => {
+exports.getTagBySlug = async (slug) => {
   const {data} = await axios.get(endpoint + '/tags?slug=' + slug)
   return data[0]
 }

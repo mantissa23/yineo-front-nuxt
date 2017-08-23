@@ -1,6 +1,6 @@
 module.exports = {
   serverMiddleware: [
-    { path: '/cache', handler: '~/services/cache.js' }
+    '~/services/cache.js' 
   ],
   plugins: [
     '~/plugins/app',
