@@ -2,7 +2,7 @@
  * Get content from wordpress via REST Api
  */
 //  const endpoint = process.env.wordpressApiBaseUrl
-const endpoint = '/api'
+const endpoint = 'http://localhost:3000/api'
 const axios = require('axios')
 
 /**
@@ -17,16 +17,22 @@ export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = nu
   if (tagId) {
     url += `&tags=${tagId}`
   }
-  axios.get(url)
+  return axios.get(url)
     .then(response => {
       const result = {
         total: Number(response.headers['x-wp-total']),
         totalPages: Number(response.headers['x-wp-totalpages']),
         data: response.data
       }
+      //  console.log(response.headers)
       return result
     })
-    .catch(e => console.log(e.message))
+    /*
+    .catch(e => {
+      console.log(e.message)
+      error: e.message
+    })
+    */
 }
 
 export const getPosts = async (perPage = 10) => {

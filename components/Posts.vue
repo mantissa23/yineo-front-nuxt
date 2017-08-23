@@ -3,18 +3,32 @@
   <section class="posts section">
     <div v-for="post in posts.data" class="post">
 
-      <nuxt-link class="title is-3" :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }">
-        <h2 v-html="post.title.rendered"></h2>
-      </nuxt-link>
+      <div class="columns">
 
-      <img v-if="post.featured_media_url" :src="post.featured_media_url" />
+        <div class="column is-one-quarter">
 
-      <div class="content" v-html="post.excerpt.rendered"></div>
+          <div class="image-wrapper has-text-centered">
+            <img v-if="post.featured_media_url" :src="post.featured_media_url" />
+          </div>
 
-      <div>
-        <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>
+        </div>
+
+        <div class="column">
+
+          <nuxt-link class="title is-3" :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }">
+            <h2 v-html="post.title.rendered"></h2>
+          </nuxt-link>
+
+          <div class="content" v-html="post.excerpt.rendered"></div>
+
+          <div>
+            <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>
+          </div>
+
+        </div>
       </div>
       <hr />
+
     </div>
 
     <Pagination :totalPages="posts.totalPages" />
@@ -27,9 +41,7 @@ import BulmaButtonLink from './BulmaButtonLink'
 import Pagination from './Pagination'
 export default {
   components: { Pagination, BulmaButtonLink },
-  props: {
-    posts: { type: Array, default: {} }
-  }
+  props: ['posts']
 }
 </script>
 

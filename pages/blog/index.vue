@@ -10,8 +10,9 @@ export default {
   transition: 'page',
   components: { Posts },
   async asyncData (params) {
+    const posts = await getPaginatedPosts(10, params.query ? params.query.page : 1)
     return {
-      posts: await getPaginatedPosts(10, params.query ? params.query.page : 1),
+      posts
     }
   }
 }
