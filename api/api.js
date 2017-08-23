@@ -29,21 +29,21 @@ export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = nu
     .catch(e => console.log(`${url} ${e.message}`))
 }
 
-export const getPosts = async (perPage = 10) => {
+export const getPosts = (perPage = 10) => {
   const url = `${endpoint}/posts?per_page=${perPage}`
   return axios.get(url)
-  .then(r => r.dara)
+  .then(r => r.data)
   .catch(e => console.log(`${url} ${e.message}`))
 }
 
-export const getPostBySlug = async (slug) => {
+export const getPostBySlug = slug => {
   const url = `${endpoint}/posts?_embed&slug=${slug}`
   return axios.get(url)
   .then(r => r.data[0] )
   .catch(e => console.log(`${url} ${e.message}`))
 }
 
-export const getTagBySlug = async (slug) => {
+export const getTagBySlug =  slug => {
   const url = `${endpoint}/tags?slug=${slug}`
   return axios.get(url)
   .then(r => r.data[0])
