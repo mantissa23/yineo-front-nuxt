@@ -1,8 +1,8 @@
 /**
  * Get content from wordpress via REST Api
  */
-//  const endpoint = process.env.wordpressApiBaseUrl
-const endpoint = process.env.proxyApiBaseUrl
+const config = require('../nuxt.config.js')
+const endpoint = config.env.proxyApiBaseUrl
 const axios = require('axios')
 
 /**
