@@ -4,7 +4,7 @@
 
 <script>
 import Posts from '~/components/Posts.vue'
-import { getPaginatedPosts } from '~/services/wpContentApi'
+import { getPaginatedPosts } from '~/api/api'
 
 export default {
   transition: 'page',

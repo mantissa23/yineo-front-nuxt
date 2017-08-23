@@ -1,5 +1,5 @@
 import axios from "axios"
-import { getPosts } from '~/services/wpContentApi'
+import { getPosts } from '~/api/api'
 
 /**
  * We do this to achieve server side rendering for

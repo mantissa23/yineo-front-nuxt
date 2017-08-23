@@ -1,7 +1,4 @@
 module.exports = {
-  serverMiddleware: [
-    '~/services/cache.js' 
-  ],
   plugins: [
     '~/plugins/app',
     '~/plugins/hydrate-layout-data',
@@ -38,7 +35,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', './services/wpContentApi'],
+    vendor: ['axios', '~/api/api'],
     /*
     ** Run ESLINT on save
     */

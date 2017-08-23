@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { getPostBySlug } from '~/services/wpContentApi'
+import { getPostBySlug } from '~/api/api'
 import Post from '~/components/Post'
 
 export default {

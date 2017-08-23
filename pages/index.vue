@@ -4,7 +4,7 @@
 
 <script>
 import Presentation from '~/components/Presentation'
-import { getPosts } from '~/services/wpContentApi'
+import { getPosts } from '~/api/api'
 
 export default {
   transition: 'page',
