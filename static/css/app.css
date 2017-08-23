@@ -46,36 +46,37 @@ a {
   position : relative;
 }
 
-@media screen and (min-width : 1008px) {
 
-  /* during entering and leaving : */
-  .page-enter-active,
-  .page-leave-active {
-    transition : all .2s ease;
-  }
+/**
+ * PAGE TRANSITIONS
+ */
 
-  /* entering start */
-  
-  .page-enter {
-    opacity: 0
-  }
-
-  /* entering end */
-  .page-enter-to {
-    opacity : 1;
-  }
-  
-  /* leaving start */
-  .page-leave {
-    opacity : 1;
-  }
-
-  /* leaving end */
-  .page-leave-to {
-    opacity : 0;
-  }
-
+/* during entering and leaving : */
+.page-enter-active,
+.page-leave-active {
+  transition : all 0.05s ease;
 }
+
+/* entering start */
+.page-enter {
+  opacity: 0
+}
+
+/* entering end */
+.page-enter-to {
+  opacity : 1;
+}
+
+/* leaving start */
+.page-leave {
+  opacity : 1;
+}
+
+/* leaving end */
+.page-leave-to {
+  opacity : 0;
+}
+
 
 /* hide "Read more" native wordpress link from post teasers */
 .posts .more-link {

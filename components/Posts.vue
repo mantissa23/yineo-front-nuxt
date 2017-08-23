@@ -41,7 +41,7 @@ import BulmaButtonLink from './BulmaButtonLink'
 import Pagination from './Pagination'
 export default {
   props: {
-    posts: { type: Array, default: () => [] }
+    posts: { type: Object, default: () => {} }
   },
   components: { Pagination, BulmaButtonLink }
 }
