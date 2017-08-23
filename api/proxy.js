@@ -4,10 +4,12 @@
  * which pass requests then to Wordpress API.
  * This let us a chance to implement custom cache of our own.
  */
+const config = require('../nuxt.config.js')
 const cachios = require('cachios')
 const express = require('express')
 const router = express.Router()
-const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
+
+const endpoint = config.env.wordpressApiBaseUrl
 
 cachios.getResponseCopy = response => {
   return {
@@ -35,6 +37,5 @@ router.get('*', async (req, res) => {
     res.json(r.data)
   }).catch(e => res.send(url + ' ' + e.message))
 })
-
 
 module.exports = router

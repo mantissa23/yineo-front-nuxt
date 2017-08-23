@@ -4,16 +4,13 @@ const app = require('express')()
 const isProd = (process.env.NODE_ENV === 'production')
 const port = process.env.PORT || 3000
 
-// We instantiate nuxt.js with the options
+app.use('/api', require('./api/proxy.js'))
 
-const routes = require('./api/proxy.js')
-app.use('/api', routes)
-
-// Render every route with nuxt.js
-
+// We instantiate nuxt.js
 const config = require('./nuxt.config.js')
 config.dev = !isProd
 const nuxt = new Nuxt(config)
+
 app.use(nuxt.render)
 
 // Build only in dev mode with hot-reloading

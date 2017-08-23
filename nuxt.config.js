@@ -1,13 +1,14 @@
 module.exports = {
+  env: {
+    wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com',
+    // use https on prod, http on local
+    proxyApiBaseUrl: process.env.NODE_ENV === 'production' ? 'https://localhost:3000/api' : 'http://localhost:3000/api'
+  },
   plugins: [
     '~/plugins/app',
     '~/plugins/hydrate-layout-data',
     { src: '~/plugins/google-analytics', ssr: false }
   ],
-  env: {
-    siteBaseUrl: 'http://yineo.fr',
-    wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com'
-  },
   router: {
     middleware: ['redirect-old-uris']
   },
