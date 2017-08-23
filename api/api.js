@@ -2,7 +2,7 @@
  * Get content from wordpress via REST Api
  */
 //  const endpoint = process.env.wordpressApiBaseUrl
-const endpoint = 'http://localhost:3000/api'
+const endpoint = process.env.proxyApiBaseUrl
 const axios = require('axios')
 
 /**

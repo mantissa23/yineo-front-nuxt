@@ -25,4 +25,6 @@ if (config.dev) {
 
 // Listen the server
 app.listen(port, '0.0.0.0')
-console.log('Hello :D Server listening on localhost:' + port)
+
+const currentEnv = isProd ? 'production' : 'developpement'
+console.log(`Server listening on localhost ${port} in ${currentEnv} mode`)
