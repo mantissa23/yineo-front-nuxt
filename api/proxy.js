@@ -31,7 +31,9 @@ router.get('/cache/flush', (req, res) => {
 // by default, just pass the request to Wordpress api and cache it with cachios
 router.get('*', async (req, res) => {
   const url = endpoint + req.originalUrl.replace('/api', '')
-  cachios.get(url).then(r => {
+  cachios.get(url,  {
+    ttl: 86400 // one day, in seconds
+  }).then(r => {
     res.set('x-wp-total', r.headers['x-wp-total'])
     res.set('x-wp-totalpages', r.headers['x-wp-totalpages'])
     res.json(r.data)
