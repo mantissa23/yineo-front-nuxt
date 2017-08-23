@@ -2,8 +2,8 @@
  * Get content from wordpress via REST Api
  */
 const config = require('../nuxt.config.js')
-const endpoint = config.env.proxyApiBaseUrl
 const axios = require('axios')
+const endpoint = config.env.proxyApiBaseUrl
 
 /**
  * @param {int} perPage : number of post to return per page
@@ -13,7 +13,7 @@ const axios = require('axios')
  * @return {object}
  */
 export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = null) => {
-  let url = endpoint + '/posts?per_page=' + perPage + '&page=' + pageNumber
+  let url = `${endpoint}/posts?per_page=${perPage}&page=${pageNumber}`
   if (tagId) {
     url += `&tags=${tagId}`
   }
@@ -24,29 +24,28 @@ export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = nu
         totalPages: Number(response.headers['x-wp-totalpages']),
         data: response.data
       }
-      //  console.log(response.headers)
       return result
     })
-    /*
-    .catch(e => {
-      console.log(e.message)
-      error: e.message
-    })
-    */
+    .catch(e => console.log(`${url} ${e.message}`))
 }
 
 export const getPosts = async (perPage = 10) => {
-  const response = await axios.get(endpoint + '/posts?per_page=' + perPage)
-  return response.data
+  const url = `${endpoint}/posts?per_page=${perPage}`
+  return axios.get(url)
+  .then(r => r.dara)
+  .catch(e => console.log(`${url} ${e.message}`))
 }
 
 export const getPostBySlug = async (slug) => {
-  const { data } = await axios.get(endpoint + '/posts?_embed&slug=' + slug)
-  return data[0]
+  const url = `${endpoint}/posts?_embed&slug=${slug}`
+  return axios.get(url)
+  .then(r => r.data[0] )
+  .catch(e => console.log(`${url} ${e.message}`))
 }
 
 export const getTagBySlug = async (slug) => {
-  const { data } = await axios.get(endpoint + '/tags?slug=' + slug)
-  return data[0]
+  const url = `${endpoint}/tags?slug=${slug}`
+  return axios.get(url)
+  .then(r => r.data[0])
+  .catch(e => console.log(`${url} ${e.message}`))
 }
-

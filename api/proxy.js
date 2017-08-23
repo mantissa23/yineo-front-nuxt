@@ -6,8 +6,9 @@
  */
 const cachios = require('cachios')
 const express = require('express')
-const router = express.Router()
 const config = require('../nuxt.config.js')
+
+const router = express.Router()
 const endpoint = config.env.wordpressApiBaseUrl
 
 cachios.getResponseCopy = response => {

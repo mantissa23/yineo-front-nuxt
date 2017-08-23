@@ -2,7 +2,7 @@ module.exports = {
   env: {
     wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com',
     // use https on prod, http on local
-    proxyApiBaseUrl: process.env.NODE_ENV == 'production' ? 'https://localhost:3000/api' : 'http://localhost:3000/api'
+    proxyApiBaseUrl: process.env.NODE_ENV == 'production' ? 'https://yineo.fr/api' : 'http://localhost:3000/api'
   },
   plugins: [
     '~/plugins/app',
