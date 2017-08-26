@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    wordpressApiBaseUrl: 'https://public-api.wordpress.com/wp/v2/sites/yannboisselier.wordpress.com',
+    drupalUrl: 'http://dev-yineo-back.pantheonsite.io',
     // use https on prod, http on local
     proxyApiBaseUrl: process.env.NODE_ENV == 'production' ? 'https://yineo.fr/api' : 'http://localhost:3000/api'
   },

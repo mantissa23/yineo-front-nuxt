@@ -2,8 +2,8 @@
  * Get content from wordpress via REST Api
  */
 const config = require('../nuxt.config.js')
-const axios = require('axios')
-const endpoint = config.env.proxyApiBaseUrl
+import contentaJsonApi from './contentaJsonApi'
+const api = contentaJsonApi(config.env.drupalUrl)
 
 /**
  * @param {int} perPage : number of post to return per page
@@ -13,7 +13,7 @@ const endpoint = config.env.proxyApiBaseUrl
  * @return {object}
  */
 export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = null) => {
-  let url = `${endpoint}/posts?per_page=${perPage}&page=${pageNumber}`
+  let url = api.get('node/article')
   if (tagId) {
     url += `&tags=${tagId}`
   }
@@ -30,16 +30,17 @@ export const getPaginatedPosts = async (perPage = 10, pageNumber = 1, tagId = nu
 }
 
 export const getPosts = (perPage = 10) => {
-  const url = `${endpoint}/posts?per_page=${perPage}`
-  return axios.get(url)
-  .then(r => r.data)
+  const url ='node/article'
+  return api.get(url)
+  .then(r => r)
   .catch(e => console.log(`${url} ${e.message}`))
 }
 
 export const getPostBySlug = slug => {
-  const url = `${endpoint}/posts?_embed&slug=${slug}`
-  return axios.get(url)
-  .then(r => r.data[0] )
+  const url = 'node/article'
+  // slug is uuid for now, so we can get post like that
+  return api.get(url, {}, slug)
+  .then(r => r )
   .catch(e => console.log(`${url} ${e.message}`))
 }
 

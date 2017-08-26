@@ -4,15 +4,15 @@
     <div class="container is-fluid">
       <section class="hero hero-title is-bold">
         <div class="hero-body" v-bind:style="{ 'background-image': 'url(' + post.featured_media_url + ')' }">
-          <h1 class="title is-1" v-html="post.title.rendered"></h1>
+          <h1 class="title is-1" v-html="post.title"></h1>
         </div>
       </section>
     </div>
 
     <div class="container is-narrow">
       <section class="post section">
-        <div v-html="post.content.rendered" class="content"></div>
-        <TagsLinks v-if="post._embedded['wp:term'][1]" :tags="post._embedded['wp:term'][1]" />
+        <div v-html="post.body.value" class="content"></div>
+        <!--<TagsLinks v-if="post._embedded['wp:term'][1]" :tags="post._embedded['wp:term'][1]" />-->
       </section>
     </div>
   </div>

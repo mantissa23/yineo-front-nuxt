@@ -5,10 +5,10 @@
         <img v-if="post.featured_media_url" :src="post.featured_media_url" />
       </div>
       <div class="column">
-        <h2>{{post.title.rendered}}</h2>
-        <div class="content" v-html="post.excerpt.rendered"></div>
+        <h2>{{post.title}}</h2>
+        <div class="content" v-html="post.body.summary"></div>
         <div>
-          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>
+          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.uuid, post: post } }"> Lire l'article </BulmaButtonLink>
         </div>
       </div>
     </div>
