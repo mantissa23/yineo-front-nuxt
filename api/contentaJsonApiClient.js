@@ -25,7 +25,8 @@ export default (ServerBaseUrl) => {
   return {
     get: async function (uri, queryParams = {}, id = "") {
       const response = await waterwheel.jsonapi.get(uri, queryParams, id);
-      return jsonapiParse.parse(response).data;
+      response.data = jsonapiParse.parse(response).data;
+      return response
     }
   }
 }

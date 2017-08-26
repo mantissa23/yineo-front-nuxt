@@ -11,8 +11,9 @@ export default {
   layout: 'post',
   components: { Post },
   async asyncData (params) {
+    const post = await getPostBySlug(params.params.slug)
     return {
-      post: await getPostBySlug(params.params.slug)
+      post
     }
   }
 }

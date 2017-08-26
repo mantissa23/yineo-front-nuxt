@@ -12,7 +12,7 @@
     <div class="container is-narrow">
       <section class="post section">
         <div v-html="post.body.value" class="content"></div>
-        <!--<TagsLinks v-if="post._embedded['wp:term'][1]" :tags="post._embedded['wp:term'][1]" />-->
+        <TagsLinks v-if="post.field_tags" :tags="post.field_tags" />
       </section>
     </div>
   </div>

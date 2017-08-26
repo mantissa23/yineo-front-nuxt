@@ -16,10 +16,10 @@
         <div class="column">
 
           <nuxt-link class="title is-3" :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }">
-            <h2 v-html="post.title.rendered"></h2>
+            <h2 v-html="post.title"></h2>
           </nuxt-link>
 
-          <div class="content" v-html="post.excerpt.rendered"></div>
+          <div class="content" v-html="post.body.summary"></div>
 
           <div>
             <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>

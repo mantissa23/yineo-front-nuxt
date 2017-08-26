@@ -8,7 +8,7 @@
         <h2>{{post.title}}</h2>
         <div class="content" v-html="post.body.summary"></div>
         <div>
-          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.uuid, post: post } }"> Lire l'article </BulmaButtonLink>
+          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>
         </div>
       </div>
     </div>
