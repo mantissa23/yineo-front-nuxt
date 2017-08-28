@@ -28,6 +28,9 @@ import PostTeaserHomepage from './PostTeaserHomepage'
 import PresentationColumnLeft from './PresentationColumnLeft'
 import PresentationColumnRight from './PresentationColumnRight'
 export default {
+  created() {
+    console.log(this.posts)
+  },
   components: { BulmaGrid, PostTeaserHomepage, PresentationColumnLeft, PresentationColumnRight },
   props: {
     posts: { type: Array, default: () => [] }

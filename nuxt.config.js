@@ -1,4 +1,10 @@
 module.exports = {
+  modules: ['@nuxtjs/apollo'],
+  apollo: {
+    networkInterfaces: {
+      default: '~/apollo/network-interfaces/default.js'
+    }
+  },
   env: {
     drupalUrl: 'http://dev-yineo-back.pantheonsite.io',
     // use https on prod, http on local

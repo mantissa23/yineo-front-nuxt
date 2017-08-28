@@ -1,0 +1,19 @@
+query {
+  postsQuery{
+    count
+    results {
+      entityUuid
+      entityCreated
+      entityLabel
+      entityUrl {
+        alias
+      }
+      ...on NodePost {
+        image
+        body {
+          summaryProcessed
+        }
+      }
+    }
+  }
+}

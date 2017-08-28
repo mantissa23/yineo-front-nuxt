@@ -1,17 +1,18 @@
 <template>
-  <Presentation :posts="posts" />
+  <Presentation :posts="postsQuery.results" />
 </template>
 
 <script>
 import Presentation from '~/components/Presentation'
-import { getPosts } from '~/api/api'
-
+import postsQuery from '~/apollo/queries/postsQuery'
 export default {
   transition: 'page',
   components: { Presentation },
-  async asyncData () {
-    const posts = await getPosts(4)
-    return { posts }
+  apollo: {
+    postsQuery: {
+      query: postsQuery,
+      prefetch: true
+    }
   }
 }
 </script>
