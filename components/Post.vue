@@ -3,7 +3,7 @@
   <div>
     <div class="container is-fluid">
       <section class="hero hero-title is-bold">
-        <div class="hero-body" v-bind:style="{ 'background-image': 'url(' + post.featured_media_url + ')' }">
+        <div class="hero-body" :style="{ 'background-image': 'url(' + post.featured_media_url + ')' }">
           <h1 class="title is-1" v-html="post.title"></h1>
         </div>
       </section>

@@ -2,13 +2,13 @@
   <div>
     <div class="columns">
       <div class="column is-one-third">
-        <img v-if="post.image" :src="`http://localhost:8888/${post.image}`" />
+        <img v-if="post.image" :src="`http://dev-yineo-back.pantheonsite.io/${post.image}`" />
       </div>
       <div class="column">
         <h2>{{post.title}}</h2>
-        <div class="content" v-html="post.body.summaryProcessed"></div>
+        <div class="content" v-html="post.teaser"></div>
         <div>
-          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>
+          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.entityUrl.alias.replace('/', '') } }"> Lire l'article </BulmaButtonLink>
         </div>
       </div>
     </div>

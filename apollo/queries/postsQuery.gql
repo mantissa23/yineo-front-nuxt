@@ -10,9 +10,7 @@ query {
       }
       ...on NodePost {
         image
-        body {
-          summaryProcessed
-        }
+        body
       }
     }
   }

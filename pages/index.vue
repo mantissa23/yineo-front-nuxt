@@ -8,6 +8,13 @@ import postsQuery from '~/apollo/queries/postsQuery'
 export default {
   transition: 'page',
   components: { Presentation },
+  data() {
+    return {
+      postsQuery: {
+        results: []
+      }
+    }
+  },
   apollo: {
     postsQuery: {
       query: postsQuery,
