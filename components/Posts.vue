@@ -8,7 +8,7 @@
         <div class="column is-one-quarter">
 
           <div class="image-wrapper has-text-centered">
-            <img v-if="post.image" :src="`https://dev-yineo-back.pantheonsite.io/${post.image}`" />
+            <img v-if="post.image" :src="`${drupalBaseUrl} /${post.image}`" />
           </div>
 
         </div>

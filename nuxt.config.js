@@ -6,9 +6,7 @@ module.exports = {
     }
   },
   env: {
-    drupalUrl: 'http://dev-yineo-back.pantheonsite.io',
-    // use https on prod, http on local
-    proxyApiBaseUrl: process.env.NODE_ENV == 'production' ? 'https://yineo.fr/api' : 'http://localhost:3000/api'
+    drupalBaseUrl: 'https://dev-yineo-back.pantheonsite.io',
   },
   plugins: [
     '~/plugins/app',
