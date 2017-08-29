@@ -40,7 +40,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', '~/api/api'],
+    vendor: ['axios'],
     /*
     ** Run ESLINT on save
     */

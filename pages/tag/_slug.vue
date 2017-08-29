@@ -9,16 +9,15 @@
 
 <script>
 import Posts from '~/components/Posts.vue'
-import { getTagBySlug, getPaginatedPosts } from '~/api/api'
 
 export default {
   transition: 'page',
   components: { Posts },
   async asyncData ({ params, query }) {
-    const tag = await getTagBySlug(params.slug)
+    const tag = {id:2}
     return {
       tag,
-      paginatedPostsByTagId: await getPaginatedPosts(10, query ? query.page : 1, tag.id)
+      paginatedPostsByTagId: []
     }
   }
 }

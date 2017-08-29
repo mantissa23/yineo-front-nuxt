@@ -8,7 +8,7 @@
         <div class="column is-one-quarter">
 
           <div class="image-wrapper has-text-centered">
-            <img v-if="post.image" :src="`${drupalBaseUrl} /${post.image}`" />
+            <img v-if="post.image" :src="`${drupalBaseUrl}/${post.image}`" />
           </div>
 
         </div>
@@ -40,9 +40,6 @@
 import BulmaButtonLink from './BulmaButtonLink'
 import Pagination from './Pagination'
 export default {
-  created() {
-    console.log(this.posts)
-  },
   props: {
     posts: { type: Object, default: () => {} }
   },

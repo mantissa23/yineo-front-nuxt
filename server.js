@@ -4,8 +4,6 @@ const app = require('express')()
 const isProd = (process.env.NODE_ENV === 'production')
 const port = process.env.PORT || 3000
 
-app.use('/api', require('./api/proxy.js'))
-
 // We instantiate nuxt.js
 const config = require('./nuxt.config.js')
 config.dev = !isProd

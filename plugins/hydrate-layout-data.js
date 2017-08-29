@@ -1,6 +1,3 @@
-import axios from "axios"
-import { getPosts } from '~/api/api'
-
 /**
  * We do this to achieve server side rendering for
  * content displayed by layouts components
