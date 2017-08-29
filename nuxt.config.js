@@ -1,5 +1,9 @@
 module.exports = {
-  modules: ['@nuxtjs/apollo'],
+  modules: [
+    // a patched version of @nuxtjs/apollo
+    // @see : https://github.com/nuxt-community/apollo-module/issues/19
+    './apollo/apollo-patched'
+  ],
   apollo: {
     networkInterfaces: {
       default: '~/apollo/network-interfaces/default.js'
