@@ -1,5 +1,5 @@
 query {
-  postsQuery( pageSize:20 ){
+  postsQuery( pageSize:4 ){
     count
     results {
       created: entityCreated

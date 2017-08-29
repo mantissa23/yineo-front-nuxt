@@ -1,0 +1,14 @@
+query route($path: String!) {
+  route(path: $path) {
+    alias
+    routed
+    path
+    entity {
+      title: entityLabel
+      ... on NodePost {
+        body: fieldBody
+        image: fieldImage
+      }
+    }
+  }
+}

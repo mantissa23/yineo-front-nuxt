@@ -1,28 +1,28 @@
 <!-- Post list as teasers -->
 <template>
   <section class="posts section">
-    <div v-for="post in posts.data" class="post">
+    <div v-for="post in posts.results" class="post">
 
       <div class="columns">
 
         <div class="column is-one-quarter">
 
           <div class="image-wrapper has-text-centered">
-            <img v-if="post.featured_media_url" :src="post.featured_media_url" />
+            <img v-if="post.image" :src="`https://dev-yineo-back.pantheonsite.io/${post.image}`" />
           </div>
 
         </div>
 
         <div class="column">
 
-          <nuxt-link class="title is-3" :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }">
+          <nuxt-link class="title is-3" :to="{ name: 'blog-slug', params: { slug: post.url.alias.replace('/', '') } }">
             <h2 v-html="post.title"></h2>
           </nuxt-link>
 
-          <div class="content" v-html="post.body.summary"></div>
+          <div class="content" v-html="post.teaser"></div>
 
           <div>
-            <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.slug, post: post } }"> Lire l'article </BulmaButtonLink>
+            <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.url.alias.replace('/', ''), post: post } }"> Lire l'article </BulmaButtonLink>
           </div>
 
         </div>
@@ -40,6 +40,9 @@
 import BulmaButtonLink from './BulmaButtonLink'
 import Pagination from './Pagination'
 export default {
+  created() {
+    console.log(this.posts)
+  },
   props: {
     posts: { type: Object, default: () => {} }
   },

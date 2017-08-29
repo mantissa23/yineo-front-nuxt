@@ -1,18 +1,18 @@
 <template>
-  <Posts :posts="posts" />
+  <Posts :posts="postsQuery" />
 </template>
 
 <script>
 import Posts from '~/components/Posts.vue'
-import { getPaginatedPosts } from '~/api/api'
+import postsQuery from '~/apollo/queries/postsQuery'
 
 export default {
   transition: 'page',
   components: { Posts },
-  async asyncData (params) {
-    const posts = await getPaginatedPosts(10, params.query ? params.query.page : 1)
-    return {
-      posts
+  apollo: {
+    postsQuery: {
+      query: postsQuery,
+      prefetch: true
     }
   }
 }

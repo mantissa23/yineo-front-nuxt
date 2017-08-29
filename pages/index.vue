@@ -4,7 +4,7 @@
 
 <script>
 import Presentation from '~/components/Presentation'
-import postsQuery from '~/apollo/queries/postsQuery'
+import postsQuery from '~/apollo/queries/postsQueryHomepage'
 export default {
   transition: 'page',
   components: { Presentation },

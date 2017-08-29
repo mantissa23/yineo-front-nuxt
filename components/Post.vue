@@ -3,7 +3,7 @@
   <div>
     <div class="container is-fluid">
       <section class="hero hero-title is-bold">
-        <div class="hero-body" :style="{ 'background-image': 'url(' + post.featured_media_url + ')' }">
+        <div class="hero-body" :style="{ 'background-image': 'url(https://dev-yineo-back.pantheonsite.io' + post.image + ')' }">
           <h1 class="title is-1" v-html="post.title"></h1>
         </div>
       </section>
@@ -11,7 +11,7 @@
 
     <div class="container is-narrow">
       <section class="post section">
-        <div v-html="post.body.value" class="content"></div>
+        <div v-html="post.body" class="content"></div>
         <TagsLinks v-if="post.field_tags" :tags="post.field_tags" />
       </section>
     </div>

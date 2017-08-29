@@ -8,7 +8,7 @@
         <h2>{{post.title}}</h2>
         <div class="content" v-html="post.teaser"></div>
         <div>
-          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.entityUrl.alias.replace('/', '') } }"> Lire l'article </BulmaButtonLink>
+          <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.url.alias.replace('/', '') } }"> Lire l'article </BulmaButtonLink>
         </div>
       </div>
     </div>

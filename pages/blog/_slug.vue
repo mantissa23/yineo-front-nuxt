@@ -1,20 +1,26 @@
 <template>
-  <Post :post="post" />
+  <Post :post="route.entity" />
 </template>
 
 <script>
-import { getPostBySlug } from '~/api/api'
 import Post from '~/components/Post'
+import postByAlias from '~/apollo/queries/postByAlias'
 
 export default {
   transition: 'page',
   layout: 'post',
   components: { Post },
-  async asyncData (params) {
-    const post = await getPostBySlug(params.params.slug)
-    return {
-      post
-    }
+  apollo: {
+    route: {
+      query: postByAlias,
+      prefetch: ({ route }) => ({ path: '/' + route.params.slug }),
+      variables () {
+        return { path: '/' +  this.$route.params.slug }
+      }
+    },
+
   }
+
+
 }
 </script>
