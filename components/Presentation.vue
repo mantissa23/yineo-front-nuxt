@@ -12,7 +12,7 @@
     </div>
 
     <div class="section content posts">
-      <h2 class="title is-3">Derniers articles</h2>
+      <h2 class="title is-3">Sélection d'articles</h2>
       <BulmaGrid :items="posts" itemsByRow="2">
         <template scope="row">
           <PostTeaserHomepage :post="row.item" />

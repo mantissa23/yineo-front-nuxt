@@ -2,22 +2,25 @@
 <template>
   <div class="section">
     <em>Les articles classés : </em>
-    <h1 class="title is-1"> {{tag.name}} </h1>
-    <Posts :posts="paginatedPostsByTagId" />
+    <!--<h1 class="title is-1"> {{tag.name}} </h1>-->
+    <Posts :posts="postsQueryByTag" />
   </div>
 </template> 
 
 <script>
 import Posts from '~/components/Posts.vue'
+import postsQueryByTag from '~/apollo/queries/postsQueryByTag'
 
 export default {
   transition: 'page',
   components: { Posts },
-  async asyncData ({ params, query }) {
-    const tag = {id:2}
-    return {
-      tag,
-      paginatedPostsByTagId: []
+  apollo: {
+    postsQueryByTag: {
+      query: postsQueryByTag,
+      prefetch: () => ({ tid: 3}),
+      variables () {
+        return { tid: 3 }
+      }
     }
   }
 }

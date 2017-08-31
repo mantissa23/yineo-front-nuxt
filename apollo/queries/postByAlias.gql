@@ -7,7 +7,17 @@ query route($path: String!) {
       title: entityLabel
       ... on NodePost {
         body: fieldBody
-        image: fieldImage
+        image: fieldImage {
+          derivative(style:large) {
+            url
+          }
+        }
+        tags: fieldTags {
+          name: entityLabel
+          url: entityUrl {
+            alias
+          }
+        }
       }
     }
   }

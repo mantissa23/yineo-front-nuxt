@@ -1,5 +1,5 @@
-query {
-  postsQuery(pageSize: 20) {
+query postsQueryByTag($tid: String!) {
+  postsQueryByTag(contextual_filter:{tid: $tid}) {
     count
     results {
       created: entityCreated

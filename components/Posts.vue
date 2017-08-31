@@ -8,7 +8,7 @@
         <div class="column is-one-quarter">
 
           <div class="image-wrapper has-text-centered">
-            <img v-if="post.image" :src="`${drupalBaseUrl}/${post.image}`" />
+            <img v-if="post.image" :src="post.image.derivative.url" />
           </div>
 
         </div>
@@ -20,6 +20,8 @@
           </nuxt-link>
 
           <div class="content" v-html="post.teaser"></div>
+
+          <TagsLinks v-if="post.tags" :tags="post.tags" />
 
           <div>
             <BulmaButtonLink :to="{ name: 'blog-slug', params: { slug: post.url.alias.replace('/', ''), post: post } }"> Lire l'article </BulmaButtonLink>
@@ -39,11 +41,12 @@
 <script>
 import BulmaButtonLink from './BulmaButtonLink'
 import Pagination from './Pagination'
+import TagsLinks from '~/components/TagsLinks'
 export default {
   props: {
     posts: { type: Object, default: () => {} }
   },
-  components: { Pagination, BulmaButtonLink }
+  components: { Pagination, BulmaButtonLink, TagsLinks },
 }
 </script>
 

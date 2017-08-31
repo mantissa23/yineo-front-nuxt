@@ -3,7 +3,7 @@
   <div>
     <div class="container is-fluid">
       <section class="hero hero-title is-bold">
-        <div class="hero-body" :style="{ 'background-image': 'url(https://dev-yineo-back.pantheonsite.io' + post.image + ')' }">
+        <div class="hero-body" :style="titleStyle">
           <h1 class="title is-1" v-html="post.title"></h1>
         </div>
       </section>
@@ -12,7 +12,7 @@
     <div class="container is-narrow">
       <section class="post section">
         <div v-html="post.body" class="content"></div>
-        <TagsLinks v-if="post.field_tags" :tags="post.field_tags" />
+        <TagsLinks v-if="post.tags" :tags="post.tags" />
       </section>
     </div>
   </div>
@@ -24,6 +24,15 @@ export default {
   components: { TagsLinks },
   props: {
     post: { type: Object, default: {} }
+  },
+  computed: {
+    titleStyle: function() {
+      let style = {}
+      if (this.post.image) {
+        style = { 'background-image': 'url(' + this.post.image.derivative.url + ')' }
+      }
+      return style
+    }
   }
 }
 </script>

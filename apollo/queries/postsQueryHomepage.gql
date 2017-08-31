@@ -1,5 +1,6 @@
+# display only promoted articles on homepage
 query {
-  postsQuery( pageSize:4 ){
+  postsQuery( pageSize:4, contextual_filter:{ promote:"1" } ){
     count
     results {
       created: entityCreated
@@ -8,7 +9,11 @@ query {
         alias
       }
       ...on NodePost {
-         image: fieldImage
+         image: fieldImage {
+            derivative(style:medium) {
+              url
+            }
+         }
          teaser: fieldTeaser
       }
     }
