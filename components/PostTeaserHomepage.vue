@@ -2,7 +2,7 @@
   <div>
     <div class="columns">
       <div class="column is-one-third">
-        <img v-if="post.image" :src="drupalBaseUrl + '/' + post.image" />
+        <img v-if="post.image" :src="post.image.derivative.url" />
       </div>
       <div class="column">
         <h2>{{post.title}}</h2>
