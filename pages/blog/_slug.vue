@@ -10,6 +10,11 @@ export default {
   transition: 'page',
   layout: 'post',
   components: { Post },
+  data() {
+    return {
+      route: {}
+    }
+  },
   apollo: {
     route: {
       query: postByAlias,

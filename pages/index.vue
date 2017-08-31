@@ -8,10 +8,17 @@ import postsQuery from '~/apollo/queries/postsQueryHomepage'
 export default {
   transition: 'page',
   components: { Presentation },
+  data() {
+    return {
+      postsQuery: {},
+      loading: 0
+    }
+  },
   apollo: {
     postsQuery: {
       query: postsQuery,
-      prefetch: true
+      prefetch: true,
+      loadingKey: 'loading'
     }
   }
 }
