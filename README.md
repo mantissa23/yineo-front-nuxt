@@ -1,6 +1,9 @@
 # yineo.fr
 
-> Yineo front-end
+> front-end for yineo.fr
+
+This site the Nuxt.js code for the front-end of https://yineo.fr.
+This is an example of a simple Drupal 8 headless site : it requests a back-end built with Drupal 8 + graphQL module.
 
 ## Build Setup
 
