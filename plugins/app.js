@@ -14,6 +14,7 @@ export default (context) => {
     })
   }
 
-  // access drupalBaseUrl from
+  // access drupalBaseUrl easily from our templates
+  // @TODO surely there is a better way to do that
   Vue.prototype.drupalBaseUrl = process.env.drupalBaseUrl
 }
